@@ -1,0 +1,175 @@
+[0.199s] Invoking command in '/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/vesc_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/f1tenth_stack:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/joy_teleop:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/mouse_teleop:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/key_teleop:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/autonomy_manager:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/RPP_node:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/FTG_node:/home/jetson/f1tenth2_ws/install/f1tenth_stack:/home/jetson/f1tenth2_ws/install/joy_teleop:/home/jetson/f1tenth2_ws/install/mouse_teleop:/home/jetson/f1tenth2_ws/install/key_teleop:/home/jetson/f1tenth2_ws/install/autonomy_manager:/home/jetson/f1tenth2_ws/install/RPP_node:/home/jetson/f1tenth2_ws/install/FTG_node:/opt/ros/foxy /usr/bin/cmake --build /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/vesc_msgs -- -j4 -l4
+[0.602s] [ 10%] Built target vesc_msgs__rosidl_generator_c
+[0.612s] [ 12%] Built target vesc_msgs__cpp
+[0.893s] [ 23%] Built target vesc_msgs__rosidl_typesupport_c
+[0.903s] [ 34%] Built target vesc_msgs__rosidl_typesupport_introspection_c
+[1.101s] [ 45%] Built target vesc_msgs__rosidl_typesupport_cpp
+[1.108s] [ 56%] Built target vesc_msgs__rosidl_typesupport_introspection_cpp
+[1.126s] [ 67%] Built target vesc_msgs__rosidl_typesupport_fastrtps_cpp
+[1.276s] [ 78%] Built target vesc_msgs__rosidl_typesupport_fastrtps_c
+[1.388s] [ 78%] Built target vesc_msgs
+[1.514s] [ 80%] Built target vesc_msgs__py
+[1.684s] [ 89%] Built target vesc_msgs__python
+[1.854s] [ 92%] Built target vesc_msgs__rosidl_typesupport_introspection_c__pyext
+[1.893s] [ 96%] Built target vesc_msgs__rosidl_typesupport_fastrtps_c__pyext
+[1.900s] [100%] Built target vesc_msgs__rosidl_typesupport_c__pyext
+[2.133s] Invoked command in '/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/vesc_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/f1tenth_stack:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/joy_teleop:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/mouse_teleop:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/key_teleop:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/autonomy_manager:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/RPP_node:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/FTG_node:/home/jetson/f1tenth2_ws/install/f1tenth_stack:/home/jetson/f1tenth2_ws/install/joy_teleop:/home/jetson/f1tenth2_ws/install/mouse_teleop:/home/jetson/f1tenth2_ws/install/key_teleop:/home/jetson/f1tenth2_ws/install/autonomy_manager:/home/jetson/f1tenth2_ws/install/RPP_node:/home/jetson/f1tenth2_ws/install/FTG_node:/opt/ros/foxy /usr/bin/cmake --build /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/vesc_msgs -- -j4 -l4
+[2.146s] Invoking command in '/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/vesc_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/f1tenth_stack:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/joy_teleop:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/mouse_teleop:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/key_teleop:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/autonomy_manager:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/RPP_node:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/FTG_node:/home/jetson/f1tenth2_ws/install/f1tenth_stack:/home/jetson/f1tenth2_ws/install/joy_teleop:/home/jetson/f1tenth2_ws/install/mouse_teleop:/home/jetson/f1tenth2_ws/install/key_teleop:/home/jetson/f1tenth2_ws/install/autonomy_manager:/home/jetson/f1tenth2_ws/install/RPP_node:/home/jetson/f1tenth2_ws/install/FTG_node:/opt/ros/foxy /usr/bin/cmake --install /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/vesc_msgs
+[2.204s] -- Install configuration: ""
+[2.207s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/ament_index/resource_index/rosidl_interfaces/vesc_msgs
+[2.207s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs
+[2.207s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg
+[2.208s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/vesc_state.h
+[2.208s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/vesc_imu.h
+[2.209s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/rosidl_generator_c__visibility_control.h
+[2.209s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/vesc_imu_stamped.h
+[2.209s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/vesc_state_stamped.h
+[2.210s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail
+[2.211s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_imu_stamped__functions.h
+[2.217s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_imu__functions.h
+[2.217s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_state__functions.h
+[2.219s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_imu__type_support.h
+[2.219s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_imu__functions.c
+[2.221s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_state_stamped__functions.h
+[2.224s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_state_stamped__functions.c
+[2.224s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_state__struct.h
+[2.226s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_imu_stamped__struct.h
+[2.227s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_state__type_support.h
+[2.228s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_imu_stamped__functions.c
+[2.228s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_state_stamped__type_support.h
+[2.228s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_state__functions.c
+[2.229s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_imu__struct.h
+[2.229s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_imu_stamped__type_support.h
+[2.230s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_state_stamped__struct.h
+[2.230s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/environment/library_path.sh
+[2.232s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/environment/library_path.dsv
+[2.234s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib/libvesc_msgs__rosidl_generator_c.so
+[2.241s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs
+[2.241s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg
+[2.242s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[2.242s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail
+[2.243s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_state__rosidl_typesupport_fastrtps_c.h
+[2.243s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_imu_stamped__rosidl_typesupport_fastrtps_c.h
+[2.243s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_state_stamped__rosidl_typesupport_fastrtps_c.h
+[2.244s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_imu__rosidl_typesupport_fastrtps_c.h
+[2.244s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib/libvesc_msgs__rosidl_typesupport_fastrtps_c.so
+[2.244s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs
+[2.245s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg
+[2.246s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[2.246s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail
+[2.246s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_state__rosidl_typesupport_fastrtps_cpp.hpp
+[2.247s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_state_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[2.247s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/dds_fastrtps
+[2.247s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_imu_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[2.248s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_imu__rosidl_typesupport_fastrtps_cpp.hpp
+[2.248s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib/libvesc_msgs__rosidl_typesupport_fastrtps_cpp.so
+[2.254s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs
+[2.255s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg
+[2.255s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[2.256s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail
+[2.256s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_imu_stamped__type_support.c
+[2.256s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_state_stamped__type_support.c
+[2.257s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_state__rosidl_typesupport_introspection_c.h
+[2.257s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_state_stamped__rosidl_typesupport_introspection_c.h
+[2.257s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_state__type_support.c
+[2.258s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_imu__rosidl_typesupport_introspection_c.h
+[2.258s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_imu_stamped__rosidl_typesupport_introspection_c.h
+[2.258s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_imu__type_support.c
+[2.259s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib/libvesc_msgs__rosidl_typesupport_introspection_c.so
+[2.262s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib/libvesc_msgs__rosidl_typesupport_c.so
+[2.262s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs
+[2.262s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg
+[2.263s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/vesc_imu.hpp
+[2.263s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/vesc_state_stamped.hpp
+[2.263s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/vesc_imu_stamped.hpp
+[2.263s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[2.264s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail
+[2.265s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_imu_stamped__builder.hpp
+[2.265s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_imu__struct.hpp
+[2.265s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_state_stamped__struct.hpp
+[2.266s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_state__traits.hpp
+[2.266s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_state__type_support.hpp
+[2.266s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_state__struct.hpp
+[2.266s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_imu_stamped__type_support.hpp
+[2.267s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_state_stamped__builder.hpp
+[2.267s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_imu_stamped__traits.hpp
+[2.267s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_imu__builder.hpp
+[2.268s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_imu__type_support.hpp
+[2.268s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_state__builder.hpp
+[2.268s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_state_stamped__traits.hpp
+[2.269s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_state_stamped__type_support.hpp
+[2.269s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_imu__traits.hpp
+[2.269s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_imu_stamped__struct.hpp
+[2.270s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/vesc_state.hpp
+[2.270s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs
+[2.271s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg
+[2.271s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail
+[2.271s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_state__type_support.cpp
+[2.272s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_imu_stamped__type_support.cpp
+[2.272s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_state_stamped__rosidl_typesupport_introspection_cpp.hpp
+[2.272s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_imu_stamped__rosidl_typesupport_introspection_cpp.hpp
+[2.273s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_state_stamped__type_support.cpp
+[2.273s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_state__rosidl_typesupport_introspection_cpp.hpp
+[2.277s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_imu__rosidl_typesupport_introspection_cpp.hpp
+[2.277s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/include/vesc_msgs/msg/detail/vesc_imu__type_support.cpp
+[2.278s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib/libvesc_msgs__rosidl_typesupport_introspection_cpp.so
+[2.278s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib/libvesc_msgs__rosidl_typesupport_cpp.so
+[2.279s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/environment/pythonpath.sh
+[2.279s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/environment/pythonpath.dsv
+[2.279s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib/python3.8/site-packages/vesc_msgs/__init__.py
+[2.460s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib/python3.8/site-packages/vesc_msgs/msg
+[2.461s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib/python3.8/site-packages/vesc_msgs/msg/_vesc_state_stamped_s.c
+[2.461s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib/python3.8/site-packages/vesc_msgs/msg/_vesc_state_stamped.py
+[2.461s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib/python3.8/site-packages/vesc_msgs/msg/_vesc_state.py
+[2.462s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib/python3.8/site-packages/vesc_msgs/msg/_vesc_imu.py
+[2.462s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib/python3.8/site-packages/vesc_msgs/msg/_vesc_state_s.c
+[2.463s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib/python3.8/site-packages/vesc_msgs/msg/_vesc_imu_stamped.py
+[2.463s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib/python3.8/site-packages/vesc_msgs/msg/__init__.py
+[2.463s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib/python3.8/site-packages/vesc_msgs/msg/_vesc_imu_stamped_s.c
+[2.464s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib/python3.8/site-packages/vesc_msgs/msg/_vesc_imu_s.c
+[2.465s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib/python3.8/site-packages/vesc_msgs/vesc_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so
+[2.465s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib/python3.8/site-packages/vesc_msgs/vesc_msgs_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so
+[2.469s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib/python3.8/site-packages/vesc_msgs/vesc_msgs_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so
+[2.473s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib/libvesc_msgs__python.so
+[2.474s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/msg/VescState.idl
+[2.475s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/msg/VescStateStamped.idl
+[2.476s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/msg/VescImu.idl
+[2.477s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/msg/VescImuStamped.idl
+[2.478s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/msg/VescState.msg
+[2.478s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/msg/VescStateStamped.msg
+[2.479s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/msg/VescImu.msg
+[2.480s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/msg/VescImuStamped.msg
+[2.480s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/ament_index/resource_index/package_run_dependencies/vesc_msgs
+[2.481s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/ament_index/resource_index/parent_prefix_path/vesc_msgs
+[2.482s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/environment/ament_prefix_path.sh
+[2.482s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/environment/ament_prefix_path.dsv
+[2.482s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/environment/path.sh
+[2.483s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/environment/path.dsv
+[2.484s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/local_setup.bash
+[2.484s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/local_setup.sh
+[2.485s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/local_setup.zsh
+[2.485s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/local_setup.dsv
+[2.486s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/package.dsv
+[2.486s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/ament_index/resource_index/packages/vesc_msgs
+[2.487s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/cmake/vesc_msgs__rosidl_generator_cExport.cmake
+[2.487s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/cmake/vesc_msgs__rosidl_generator_cExport-noconfig.cmake
+[2.488s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/cmake/vesc_msgs__rosidl_typesupport_introspection_cExport.cmake
+[2.488s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/cmake/vesc_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[2.489s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/cmake/vesc_msgs__rosidl_typesupport_cExport.cmake
+[2.490s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/cmake/vesc_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[2.491s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/cmake/vesc_msgs__rosidl_generator_cppExport.cmake
+[2.491s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/cmake/vesc_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[2.492s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/cmake/vesc_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[2.493s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/cmake/vesc_msgs__rosidl_typesupport_cppExport.cmake
+[2.493s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/cmake/vesc_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[2.493s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/cmake/rosidl_cmake-extras.cmake
+[2.494s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.494s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[2.494s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[2.495s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.495s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[2.496s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[2.496s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/cmake/vesc_msgsConfig.cmake
+[2.497s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/cmake/vesc_msgsConfig-version.cmake
+[2.497s] -- Up-to-date: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/share/vesc_msgs/package.xml
+[3.524s] Invoked command in '/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/vesc_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/f1tenth_stack:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/joy_teleop:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/mouse_teleop:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/key_teleop:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/autonomy_manager:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/RPP_node:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/FTG_node:/home/jetson/f1tenth2_ws/install/f1tenth_stack:/home/jetson/f1tenth2_ws/install/joy_teleop:/home/jetson/f1tenth2_ws/install/mouse_teleop:/home/jetson/f1tenth2_ws/install/key_teleop:/home/jetson/f1tenth2_ws/install/autonomy_manager:/home/jetson/f1tenth2_ws/install/RPP_node:/home/jetson/f1tenth2_ws/install/FTG_node:/opt/ros/foxy /usr/bin/cmake --install /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/vesc_msgs

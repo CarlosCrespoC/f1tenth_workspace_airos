@@ -33,7 +33,7 @@ class WaypointFollower(Node):
 
         # ------------ Parámetros ------------
         self.declare_parameter("topic_odom", "/odom")
-        self.declare_parameter("topic_cmd",  "/drive")
+        self.declare_parameter("topic_cmd",  "/autonomous")
 
         self.declare_parameter("rate_hz", 50.0)
         self.declare_parameter("wheelbase", 0.33)
@@ -112,7 +112,7 @@ class WaypointFollower(Node):
         self.autonomous_active: bool = g("autonomous_start").get_parameter_value().bool_value
 
         # ------------ Estado ------------
-        self._actual_path = deque(maxlen=self.actual_path_len)
+        self.actual_path = deque(maxlen=self.actual_path_len)
         self.have_odom = False
         self.last_odom_t = 0.0
         self.x = self.y = self.yaw = 0.0

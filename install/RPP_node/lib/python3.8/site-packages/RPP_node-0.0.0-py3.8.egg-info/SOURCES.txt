@@ -12,6 +12,7 @@ RPP_node/__init__.py
 RPP_node/rpp_node.py
 RPP_node/rpp_node_2.py
 config/rpp_params.yaml
+launch/direct_test.launch.py
 resource/RPP_node
 test/test_copyright.py
 test/test_flake8.py
