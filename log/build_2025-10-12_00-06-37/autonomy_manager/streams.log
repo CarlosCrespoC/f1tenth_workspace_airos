@@ -1,0 +1,43 @@
+[7.071s] Invoking command in '/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/autonomy_manager': PYTHONPATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/autonomy_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/autonomy_manager/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/autonomy_manager build --build-base /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/autonomy_manager/build install --record /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/autonomy_manager/install.log --install-scripts $base/lib/autonomy_manager --single-version-externally-managed install_data
+[10.072s] running egg_info
+[10.075s] creating ../build/autonomy_manager/autonomy_manager.egg-info
+[10.076s] writing ../build/autonomy_manager/autonomy_manager.egg-info/PKG-INFO
+[10.078s] writing dependency_links to ../build/autonomy_manager/autonomy_manager.egg-info/dependency_links.txt
+[10.079s] writing entry points to ../build/autonomy_manager/autonomy_manager.egg-info/entry_points.txt
+[10.080s] writing requirements to ../build/autonomy_manager/autonomy_manager.egg-info/requires.txt
+[10.081s] writing top-level names to ../build/autonomy_manager/autonomy_manager.egg-info/top_level.txt
+[10.087s] writing manifest file '../build/autonomy_manager/autonomy_manager.egg-info/SOURCES.txt'
+[10.563s] reading manifest file '../build/autonomy_manager/autonomy_manager.egg-info/SOURCES.txt'
+[10.570s] writing manifest file '../build/autonomy_manager/autonomy_manager.egg-info/SOURCES.txt'
+[10.573s] running build
+[10.573s] running build_py
+[10.575s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/autonomy_manager/build
+[10.576s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/autonomy_manager/build/lib
+[10.577s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/autonomy_manager/build/lib/autonomy_manager
+[10.578s] copying autonomy_manager/autonomy_manager_node.py -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/autonomy_manager/build/lib/autonomy_manager
+[10.584s] copying autonomy_manager/__init__.py -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/autonomy_manager/build/lib/autonomy_manager
+[10.584s] running install
+[10.600s] running install_lib
+[10.605s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/autonomy_manager/lib/python3.8/site-packages/autonomy_manager
+[10.606s] copying /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/autonomy_manager/build/lib/autonomy_manager/autonomy_manager_node.py -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/autonomy_manager/lib/python3.8/site-packages/autonomy_manager
+[10.607s] copying /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/autonomy_manager/build/lib/autonomy_manager/__init__.py -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/autonomy_manager/lib/python3.8/site-packages/autonomy_manager
+[10.637s] byte-compiling /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/autonomy_manager/lib/python3.8/site-packages/autonomy_manager/autonomy_manager_node.py to autonomy_manager_node.cpython-38.pyc
+[10.647s] Sorry: TabError: inconsistent use of tabs and spaces in indentation (autonomy_manager_node.py, line 26)
+[10.647s] byte-compiling /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/autonomy_manager/lib/python3.8/site-packages/autonomy_manager/__init__.py to __init__.cpython-38.pyc
+[10.651s] running install_data
+[10.652s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/autonomy_manager/share/ament_index
+[10.653s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/autonomy_manager/share/ament_index/resource_index
+[10.654s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/autonomy_manager/share/ament_index/resource_index/packages
+[10.654s] copying resource/autonomy_manager -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/autonomy_manager/share/ament_index/resource_index/packages
+[10.656s] copying package.xml -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/autonomy_manager/share/autonomy_manager
+[10.657s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/autonomy_manager/share/autonomy_manager/launch
+[10.659s] copying launch/rpp_2.launch.py -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/autonomy_manager/share/autonomy_manager/launch
+[10.660s] copying launch/navigation.launch.py -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/autonomy_manager/share/autonomy_manager/launch
+[10.661s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/autonomy_manager/share/autonomy_manager/autonomy_manager
+[10.662s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/autonomy_manager/share/autonomy_manager/src
+[10.662s] running install_egg_info
+[10.679s] Copying ../build/autonomy_manager/autonomy_manager.egg-info to /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/autonomy_manager/lib/python3.8/site-packages/autonomy_manager-0.0.0-py3.8.egg-info
+[10.686s] running install_scripts
+[10.870s] Installing autonomy_manager_node script to /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/autonomy_manager/lib/autonomy_manager
+[10.898s] writing list of installed files to '/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/autonomy_manager/install.log'
+[11.106s] Invoked command in '/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/autonomy_manager' returned '0': PYTHONPATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/autonomy_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/autonomy_manager/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/autonomy_manager build --build-base /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/autonomy_manager/build install --record /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/autonomy_manager/install.log --install-scripts $base/lib/autonomy_manager --single-version-externally-managed install_data

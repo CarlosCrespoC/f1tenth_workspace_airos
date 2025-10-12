@@ -1,0 +1,24 @@
+# Configuración de los topics de entrada para el ackermann_mux
+
+ackermann_mux:
+  ros__parameters:
+    # Lista de topics de entrada con su configuración detallada.
+    # El número de 'priority' más alto tiene preferencia sobre los más bajos.
+    topics:
+      # Prioridad MÁXIMA: Parada de Emergencia
+      emergency_stop:
+        topic   : /emergency_stop
+        timeout : 0.5
+        priority: 200  # <-- La prioridad más alta
+
+      # Prioridad MEDIA: Control Manual con Joystick
+      teleop_manual:
+        topic   : /teleop
+        timeout : 0.5
+        priority: 100  # <-- Prioridad intermedia
+
+      # Prioridad BAJA: Control Autónomo
+      autonomy:
+        topic   : /autonomous
+        timeout : 0.5
+        priority: 10   # <-- La prioridad más baja
