@@ -1,0 +1,124 @@
+jetson@jetson:~/f1tenth2_ws$ ros2 launch f1tenth_stack bringup_launch.py 
+[INFO] [launch]: All log files can be found below /home/jetson/.ros/log/2025-10-11-21-20-32-299754-jetson-2801
+[INFO] [launch]: Default logging verbosity is set to INFO
+Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<LaunchService._process_one_event() done, defined at /opt/ros/foxy/lib/python3.8/site-packages/launch/launch_service.py:226> exception=PackageNotFoundError("package 'f1tenth_ftg' not found, searching: ['/home/jetson/f1tenth2_ws/install/f1tenth_stack', '/home/jetson/f1tenth2_ws/install/vesc', '/home/jetson/f1tenth2_ws/install/vesc_driver', '/home/jetson/f1tenth2_ws/install/vesc_ackermann', '/home/jetson/f1tenth2_ws/install/vesc_msgs', '/home/jetson/f1tenth2_ws/install/teleop_tools', '/home/jetson/f1tenth2_ws/install/joy_teleop', '/home/jetson/f1tenth2_ws/install/teleop_tools_msgs', '/home/jetson/f1tenth2_ws/install/mouse_teleop', '/home/jetson/f1tenth2_ws/install/key_teleop', '/home/jetson/f1tenth2_ws/install/autonomy_manager', '/home/jetson/f1tenth2_ws/install/ackermann_mux', '/home/jetson/f1tenth2_ws/install/RPP_node', '/home/jetson/f1tenth2_ws/install/FTG_node', '/opt/ros/foxy']")>
+Traceback (most recent call last):
+  File "/opt/ros/foxy/lib/python3.8/site-packages/ament_index_python/packages.py", line 50, in get_package_prefix
+    content, package_prefix = get_resource('packages', package_name)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/ament_index_python/resources.py", line 48, in get_resource
+    raise LookupError(
+LookupError: Could not find the resource 'f1tenth_ftg' of type 'packages'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/launch_service.py", line 228, in _process_one_event
+    await self.__process_event(next_event)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/launch_service.py", line 248, in __process_event
+    visit_all_entities_and_collect_futures(entity, self.__context))
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/utilities/visit_all_entities_and_collect_futures_impl.py", line 45, in visit_all_entities_and_collect_futures
+    futures_to_return += visit_all_entities_and_collect_futures(sub_entity, context)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/utilities/visit_all_entities_and_collect_futures_impl.py", line 45, in visit_all_entities_and_collect_futures
+    futures_to_return += visit_all_entities_and_collect_futures(sub_entity, context)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/utilities/visit_all_entities_and_collect_futures_impl.py", line 45, in visit_all_entities_and_collect_futures
+    futures_to_return += visit_all_entities_and_collect_futures(sub_entity, context)
+  [Previous line repeated 1 more time]
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/utilities/visit_all_entities_and_collect_futures_impl.py", line 38, in visit_all_entities_and_collect_futures
+    sub_entities = entity.visit(context)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/action.py", line 108, in visit
+    return self.execute(context)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch_ros/actions/node.py", line 453, in execute
+    ret = super().execute(context)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/actions/execute_process.py", line 823, in execute
+    self.__expand_substitutions(context)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/actions/execute_process.py", line 668, in __expand_substitutions
+    cmd = [perform_substitutions(context, x) for x in self.__cmd]
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/actions/execute_process.py", line 668, in <listcomp>
+    cmd = [perform_substitutions(context, x) for x in self.__cmd]
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/utilities/perform_substitutions_impl.py", line 26, in perform_substitutions
+    return ''.join([context.perform_substitution(sub) for sub in subs])
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/utilities/perform_substitutions_impl.py", line 26, in <listcomp>
+    return ''.join([context.perform_substitution(sub) for sub in subs])
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/launch_context.py", line 232, in perform_substitution
+    return substitution.perform(self)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch_ros/substitutions/executable_in_package.py", line 76, in perform
+    package_prefix = super().perform(context)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch_ros/substitutions/find_package.py", line 79, in perform
+    result = self.find(package)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch_ros/substitutions/find_package.py", line 96, in find
+    return get_package_prefix(package_name)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/ament_index_python/packages.py", line 52, in get_package_prefix
+    raise PackageNotFoundError(
+ament_index_python.packages.PackageNotFoundError: "package 'f1tenth_ftg' not found, searching: ['/home/jetson/f1tenth2_ws/install/f1tenth_stack', '/home/jetson/f1tenth2_ws/install/vesc', '/home/jetson/f1tenth2_ws/install/vesc_driver', '/home/jetson/f1tenth2_ws/install/vesc_ackermann', '/home/jetson/f1tenth2_ws/install/vesc_msgs', '/home/jetson/f1tenth2_ws/install/teleop_tools', '/home/jetson/f1tenth2_ws/install/joy_teleop', '/home/jetson/f1tenth2_ws/install/teleop_tools_msgs', '/home/jetson/f1tenth2_ws/install/mouse_teleop', '/home/jetson/f1tenth2_ws/install/key_teleop', '/home/jetson/f1tenth2_ws/install/autonomy_manager', '/home/jetson/f1tenth2_ws/install/ackermann_mux', '/home/jetson/f1tenth2_ws/install/RPP_node', '/home/jetson/f1tenth2_ws/install/FTG_node', '/opt/ros/foxy']"
+Task exception was never retrieved
+future: <Task finished name='Task-36' coro=<LaunchService._process_one_event() done, defined at /opt/ros/foxy/lib/python3.8/site-packages/launch/launch_service.py:226> exception=RuntimeError('Signal event received before subprocess transport available.')>
+Traceback (most recent call last):
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/launch_service.py", line 228, in _process_one_event
+    await self.__process_event(next_event)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/launch_service.py", line 248, in __process_event
+    visit_all_entities_and_collect_futures(entity, self.__context))
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/utilities/visit_all_entities_and_collect_futures_impl.py", line 38, in visit_all_entities_and_collect_futures
+    sub_entities = entity.visit(context)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/action.py", line 108, in visit
+    return self.execute(context)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/actions/opaque_function.py", line 75, in execute
+    return self.__function(context, *self.__args, **self.__kwargs)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/launch/actions/execute_process.py", line 443, in __on_signal_process_event
+    raise RuntimeError('Signal event received before subprocess transport available.')
+RuntimeError: Signal event received before subprocess transport available.
+[INFO] [joy_node-1]: process started with pid [2803]
+[INFO] [joy_teleop-2]: process started with pid [2805]
+[INFO] [ackermann_to_vesc_node-3]: process started with pid [2807]
+[INFO] [vesc_to_odom_node-4]: process started with pid [2809]
+[INFO] [vesc_driver_node-5]: process started with pid [2811]
+[INFO] [urg_node_driver-6]: process started with pid [2813]
+[INFO] [ackermann_mux-7]: process started with pid [2815]
+[INFO] [static_transform_publisher-8]: process started with pid [2817]
+[INFO] [ackermann_mux-7]: sending signal 'SIGINT' to process[ackermann_mux-7]
+[INFO] [urg_node_driver-6]: sending signal 'SIGINT' to process[urg_node_driver-6]
+[ERROR] [ackermann_mux-7]: process has died [pid 2815, exit code -2, cmd '/home/jetson/f1tenth2_ws/install/ackermann_mux/lib/ackermann_mux/ackermann_mux --ros-args -r __node:=ackermann_mux --params-file /home/jetson/f1tenth2_ws/install/f1tenth_stack/share/f1tenth_stack/config/mux.yaml -r ackermann_cmd_out:=ackermann_drive'].
+[INFO] [vesc_driver_node-5]: sending signal 'SIGINT' to process[vesc_driver_node-5]
+[INFO] [vesc_to_odom_node-4]: sending signal 'SIGINT' to process[vesc_to_odom_node-4]
+[INFO] [ackermann_to_vesc_node-3]: sending signal 'SIGINT' to process[ackermann_to_vesc_node-3]
+[INFO] [joy_teleop-2]: sending signal 'SIGINT' to process[joy_teleop-2]
+[INFO] [joy_node-1]: sending signal 'SIGINT' to process[joy_node-1]
+[INFO] [urg_node_driver-6]: process has finished cleanly [pid 2813]
+[urg_node_driver-6] [INFO] [1760235632.929126911] [urg_node]: Connected to network device with ID: B2232259
+[ERROR] [joy_teleop-2]: process has died [pid 2805, exit code -2, cmd '/home/jetson/f1tenth2_ws/install/joy_teleop/lib/joy_teleop/joy_teleop --ros-args -r __node:=joy_teleop --params-file /home/jetson/f1tenth2_ws/install/f1tenth_stack/share/f1tenth_stack/config/joy_teleop.yaml'].
+[urg_node_driver-6] [INFO] [1760235632.962525067] [rclcpp]: signal_handler(signal_value=2)
+[vesc_to_odom_node-4] [INFO] [1760235633.007868043] [rclcpp]: signal_handler(signal_value=2)
+[ackermann_to_vesc_node-3] [INFO] [1760235633.017982420] [rclcpp]: signal_handler(signal_value=2)
+[ackermann_to_vesc_node-3] terminate called after throwing an instance of 'rclcpp::exceptions::RCLError'
+[ackermann_to_vesc_node-3]   what():  could not create service: rcl node's context is invalid, at /tmp/binarydeb/ros-foxy-rcl-1.1.14/src/rcl/node.c:441
+[vesc_driver_node-5] [INFO] [1760235632.988065257] [rclcpp]: signal_handler(signal_value=2)
+[joy_node-1] [INFO] [1760235633.069189000] [rclcpp]: signal_handler(signal_value=2)
+[vesc_driver_node-5] terminate called after throwing an instance of 'rclcpp::exceptions::RCLError'
+[vesc_driver_node-5]   what():  failed to create interrupt guard condition: the given context is not valid, either rcl_init() was not called or rcl_shutdown() was called., at /tmp/binarydeb/ros-foxy-rcl-1.1.14/src/rcl/guard_condition.c:67
+[vesc_to_odom_node-4] terminate called after throwing an instance of 'rclcpp::exceptions::RCLError'
+[vesc_to_odom_node-4]   what():  failed to initialize rcl node: the given context is not valid, either rcl_init() was not called or rcl_shutdown() was called., at /tmp/binarydeb/ros-foxy-rcl-1.1.14/src/rcl/guard_condition.c:67
+[joy_teleop-2] Traceback (most recent call last):
+[joy_teleop-2]   File "/home/jetson/f1tenth2_ws/install/joy_teleop/lib/joy_teleop/joy_teleop", line 6, in <module>
+[joy_teleop-2]     from pkg_resources import load_entry_point
+[joy_teleop-2]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 26, in <module>
+[joy_teleop-2]     import zipfile
+[joy_teleop-2]   File "/usr/lib/python3.8/zipfile.py", line 13, in <module>
+[joy_teleop-2]     import shutil
+[joy_teleop-2]   File "/usr/lib/python3.8/shutil.py", line 29, in <module>
+[joy_teleop-2]     import lzma
+[joy_teleop-2]   File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+[joy_teleop-2]   File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+[joy_teleop-2]   File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+[joy_teleop-2]   File "<frozen importlib._bootstrap_external>", line 844, in exec_module
+[joy_teleop-2]   File "<frozen importlib._bootstrap_external>", line 939, in get_code
+[joy_teleop-2]   File "<frozen importlib._bootstrap_external>", line 1037, in get_data
+[joy_teleop-2] KeyboardInterrupt
+[static_transform_publisher-8] [INFO] [1760235633.140374474] [static_baselink_to_laser]: Spinning until killed publishing transform from 'base_link' to 'laser'
+[INFO] [joy_node-1]: process has finished cleanly [pid 2803]
+[ERROR] [vesc_to_odom_node-4]: process has died [pid 2809, exit code -6, cmd '/home/jetson/f1tenth2_ws/install/vesc_ackermann/lib/vesc_ackermann/vesc_to_odom_node --ros-args -r __node:=vesc_to_odom_node --params-file /home/jetson/f1tenth2_ws/install/f1tenth_stack/share/f1tenth_stack/config/vesc.yaml'].
+[ERROR] [ackermann_to_vesc_node-3]: process has died [pid 2807, exit code -6, cmd '/home/jetson/f1tenth2_ws/install/vesc_ackermann/lib/vesc_ackermann/ackermann_to_vesc_node --ros-args -r __node:=ackermann_to_vesc_node --params-file /home/jetson/f1tenth2_ws/install/f1tenth_stack/share/f1tenth_stack/config/vesc.yaml'].
+[ERROR] [vesc_driver_node-5]: process has died [pid 2811, exit code -6, cmd '/home/jetson/f1tenth2_ws/install/vesc_driver/lib/vesc_driver/vesc_driver_node --ros-args -r __node:=vesc_driver_node --params-file /home/jetson/f1tenth2_ws/install/f1tenth_stack/share/f1tenth_stack/config/vesc.yaml'].
+^C[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[static_transform_publisher-8] [INFO] [1760235635.056240055] [rclcpp]: signal_handler(signal_value=2)
+[INFO] [static_transform_publisher-8]: process has finished cleanly [pid 2817]
+
