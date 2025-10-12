@@ -3,14 +3,14 @@ rpp_follower:
   ros__parameters:
     # --- Topics y Configuración Base ---
     # El topic de odometría del coche real (no de la simulación)
-    topic_odom: "/amcl_pose"
+    topic_odom: "/odom"
     # El topic de comandos será redirigido en el launch, no necesita valor aquí
     topic_cmd: "/drive"
     # El wheelbase del F1TENTH
     wheelbase: 0.33
     # Frame del mapa para las visualizaciones
     path_frame: "map"
-     
+    odom_timeout: 5.0 
     # --- Parámetros de Pure Pursuit ---
     loop_track: True
     LOOKAHEAD_DIST: 2.5

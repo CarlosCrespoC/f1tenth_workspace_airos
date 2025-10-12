@@ -128,16 +128,7 @@ def generate_launch_description():
         arguments=['0.27', '0.0', '0.11', '0.0', '0.0', '0.0', 'base_link', 'laser']
     )
 
-    # >>>>> INICIO DE LA MODIFICACIÓN <<<<<
-    # Definición del nodo para el algoritmo "Follow the Gap"
-    follow_the_gap_node = Node(
-        package='f1tenth_ftg',         # El nombre de tu paquete
-        executable='ftg_node',         # El nombre del ejecutable de setup.py
-        name='follow_the_gap_node',    # Un nombre para el nodo en ejecución
-        output='screen'                # Muestra los logs del nodo en la terminal
-    )
-    # >>>>> FIN DE LA MODIFICACIÓN <<<<<
-
+    
     # finalize
     ld.add_action(joy_node)
     ld.add_action(joy_teleop_node)
@@ -149,9 +140,5 @@ def generate_launch_description():
     ld.add_action(ackermann_mux_node)
     ld.add_action(static_tf_node)
 
-    # >>>>> INICIO DE LA MODIFICACIÓN <<<<<
-    # Añadir el nodo "Follow the Gap" a la lista de lanzamiento
-    ld.add_action(follow_the_gap_node)
-    # >>>>> FIN DE LA MODIFICACIÓN <<<<<
-
+    
     return ld
