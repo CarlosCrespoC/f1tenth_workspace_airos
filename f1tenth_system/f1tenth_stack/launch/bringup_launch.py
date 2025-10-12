@@ -37,6 +37,16 @@ def generate_launch_description():
         'config',
         'joy_teleop.yaml'
     )
+    rpp_config = os.path.join(
+        get_package_share_directory('RPP_node'),
+        'config',
+        'rpp.yaml'
+    )
+    rpp_waypoints = os.path.join(
+        get_package_share_directory('RPP_node'),
+        'waypoints',
+        'crespo.csv'
+    )
     vesc_config = os.path.join(
         get_package_share_directory('f1tenth_stack'),
         'config',
@@ -128,6 +138,14 @@ def generate_launch_description():
         arguments=['0.27', '0.0', '0.11', '0.0', '0.0', '0.0', 'base_link', 'laser']
     )
 
+    rpp_node = Node(
+        package='RPP_node',
+        executable='rpp_node_executable_2',   # tu entry point
+        name='rpp_follower',
+        output='screen',
+        parameters=[rpp_params, {'waypoints_csv': rpp_waypoints}]
+    )
+
     
     # finalize
     ld.add_action(joy_node)
@@ -139,6 +157,7 @@ def generate_launch_description():
     ld.add_action(urg_node)
     ld.add_action(ackermann_mux_node)
     ld.add_action(static_tf_node)
+    ld.add_action(rpp_node)
 
     
     return ld
