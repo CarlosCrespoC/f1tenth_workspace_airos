@@ -48,7 +48,7 @@ def generate_launch_description():
         'sensors.yaml'
     )
     mux_config = os.path.join(
-        get_package_share_directory('f1tenth_stack'),
+        get_package_share_directory('ackermann_mux'),
         'config',
         'ackermann_mux_topics.yaml'
     )
