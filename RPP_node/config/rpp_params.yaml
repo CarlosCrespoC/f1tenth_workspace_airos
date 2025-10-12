@@ -5,7 +5,7 @@ rpp_follower:
     # El topic de odometría del coche real (no de la simulación)
     topic_odom: "/odom"
     # El topic de comandos será redirigido en el launch, no necesita valor aquí
-    topic_cmd: "/drive"
+    topic_cmd: "/autonomous"
     # El wheelbase del F1TENTH
     wheelbase: 0.33
     # Frame del mapa para las visualizaciones

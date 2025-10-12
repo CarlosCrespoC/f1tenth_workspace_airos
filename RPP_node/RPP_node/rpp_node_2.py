@@ -33,7 +33,7 @@ class WaypointFollower(Node):
 
         # ------------ Parámetros ------------
         self.declare_parameter("topic_odom", "/odom")
-        self.declare_parameter("topic_cmd",  "/drive")
+        self.declare_parameter("topic_cmd",  "/autonomous")
 
         self.declare_parameter("rate_hz", 50.0)
         self.declare_parameter("wheelbase", 0.33)

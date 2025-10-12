@@ -1,0 +1,3 @@
+[console_scripts]
+odom_pp_executable = odom_pp_node.odom_pp:main
+
