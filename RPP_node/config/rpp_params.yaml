@@ -23,7 +23,7 @@ rpp_follower:
     loop_track: true
     
     # AJUSTADO: Lookahead más corto para curvas más cerradas
-    LOOKAHEAD_DIST: 1.5               # Reducido de 2.5 a 1.5 para giros más agresivos
+    LOOKAHEAD_DIST: 0.7               # Reducido de 2.5 a 1.5 para giros más agresivos
     
     v_cmd: 1.0                        # Velocidad para el coche real, ajusta según la pista
     
