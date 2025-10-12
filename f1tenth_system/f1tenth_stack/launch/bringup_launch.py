@@ -40,7 +40,7 @@ def generate_launch_description():
     rpp_config = os.path.join(
         get_package_share_directory('RPP_node'),
         'config',
-        'rpp.yaml'
+        'rpp_params.yaml'
     )
     rpp_waypoints = os.path.join(
         get_package_share_directory('RPP_node'),
@@ -143,7 +143,7 @@ def generate_launch_description():
         executable='rpp_node_executable_2',   # tu entry point
         name='rpp_follower',
         output='screen',
-        parameters=[rpp_params, {'waypoints_csv': rpp_waypoints}]
+        parameters=[rpp_config, {'waypoints_csv': rpp_waypoints}]
     )
 
     
