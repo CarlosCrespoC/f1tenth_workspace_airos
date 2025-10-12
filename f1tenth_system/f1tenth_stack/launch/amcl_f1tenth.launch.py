@@ -12,7 +12,7 @@ def generate_launch_description():
     # Declarar el argumento para la ruta del mapa
     map_file_arg = DeclareLaunchArgument(
         'map',
-        default_value=os.path.join(pkg_share, 'maps', 'mapa1.yaml'), # <--- RUTA A TU MAPA
+        default_value=os.path.join(pkg_share, 'maps', 'mapa_lab.yaml'), # <--- RUTA A TU MAPA
         description='Full path to map file to load'
     )
 

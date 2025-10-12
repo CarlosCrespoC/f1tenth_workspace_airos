@@ -45,7 +45,7 @@ def generate_launch_description():
     rpp_waypoints = os.path.join(
         get_package_share_directory('RPP_node'),
         'waypoints',
-        'mapa1.csv'
+        'mapa_lab_way.csv'
     )
     vesc_config = os.path.join(
         get_package_share_directory('f1tenth_stack'),
