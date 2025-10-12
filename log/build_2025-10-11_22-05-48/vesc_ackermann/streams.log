@@ -1,0 +1,101 @@
+[0.077s] Invoking command in '/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/vesc_ackermann': AMENT_PREFIX_PATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/f1tenth_system/vesc/vesc_ackermann -DCMAKE_INSTALL_PREFIX=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann
+[0.363s] -- The C compiler identification is GNU 9.4.0
+[0.648s] -- The CXX compiler identification is GNU 9.4.0
+[0.670s] -- Check for working C compiler: /usr/bin/cc
+[1.016s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.023s] -- Detecting C compiler ABI info
+[1.375s] -- Detecting C compiler ABI info - done
+[1.435s] -- Detecting C compile features
+[1.436s] -- Detecting C compile features - done
+[1.448s] -- Check for working CXX compiler: /usr/bin/c++
+[1.836s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.842s] -- Detecting CXX compiler ABI info
+[2.238s] -- Detecting CXX compiler ABI info - done
+[2.298s] -- Detecting CXX compile features
+[2.304s] -- Detecting CXX compile features - done
+[2.315s] -- Found ament_cmake_auto: 0.9.12 (/opt/ros/foxy/share/ament_cmake_auto/cmake)
+[2.434s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[2.435s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.802s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.834s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[4.266s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[4.390s] -- Found FastRTPS: /opt/ros/foxy/include  
+[4.769s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[5.745s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[5.752s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[5.756s] -- Looking for pthread.h
+[6.100s] -- Looking for pthread.h - found
+[6.102s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[6.458s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[6.461s] -- Looking for pthread_create in pthreads
+[6.746s] -- Looking for pthread_create in pthreads - not found
+[6.747s] -- Looking for pthread_create in pthread
+[7.073s] -- Looking for pthread_create in pthread - found
+[7.078s] -- Found Threads: TRUE  
+[8.992s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[9.074s] -- Added test 'copyright' to check source files copyright and LICENSE
+[9.082s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[9.082s] -- Configured cppcheck include dirs: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/f1tenth_system/vesc/vesc_ackermann/include
+[9.083s] -- Configured cppcheck exclude dirs and/or files: 
+[9.088s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[9.088s] -- Configured cpplint exclude dirs and/or files: 
+[9.092s] -- Added test 'lint_cmake' to check CMake code style
+[9.099s] -- Added test 'uncrustify' to check C / C++ code style
+[9.099s] -- Configured uncrustify additional arguments: 
+[9.101s] -- Added test 'xmllint' to check XML markup files
+[9.134s] -- Configuring done
+[9.248s] -- Generating done
+[9.293s] -- Build files have been written to: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/vesc_ackermann
+[9.329s] Invoked command in '/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/vesc_ackermann' returned '0': AMENT_PREFIX_PATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/f1tenth_system/vesc/vesc_ackermann -DCMAKE_INSTALL_PREFIX=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann
+[9.340s] Invoking command in '/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/vesc_ackermann': AMENT_PREFIX_PATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/vesc_ackermann -- -j4 -l4
+[9.527s] [35m[1mScanning dependencies of target vesc_to_odom_node[0m
+[9.528s] [35m[1mScanning dependencies of target ackermann_to_vesc_node[0m
+[9.754s] [ 14%] [32mBuilding CXX object CMakeFiles/vesc_to_odom_node.dir/rclcpp_components/node_main_vesc_to_odom_node.cpp.o[0m
+[9.758s] [ 28%] [32mBuilding CXX object CMakeFiles/ackermann_to_vesc_node.dir/rclcpp_components/node_main_ackermann_to_vesc_node.cpp.o[0m
+[23.319s] [ 42%] [32m[1mLinking CXX executable ackermann_to_vesc_node[0m
+[23.356s] [ 57%] [32m[1mLinking CXX executable vesc_to_odom_node[0m
+[23.897s] [ 57%] Built target ackermann_to_vesc_node
+[23.945s] [ 57%] Built target vesc_to_odom_node
+[23.997s] [35m[1mScanning dependencies of target vesc_ackermann[0m
+[24.293s] [ 71%] [32mBuilding CXX object CMakeFiles/vesc_ackermann.dir/src/ackermann_to_vesc.cpp.o[0m
+[44.630s] [ 85%] [32mBuilding CXX object CMakeFiles/vesc_ackermann.dir/src/vesc_to_odom.cpp.o[0m
+[67.868s] [100%] [32m[1mLinking CXX shared library libvesc_ackermann.so[0m
+[69.818s] [100%] Built target vesc_ackermann
+[69.877s] Invoked command in '/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/vesc_ackermann' returned '0': AMENT_PREFIX_PATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/vesc_ackermann -- -j4 -l4
+[69.889s] Invoking command in '/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/vesc_ackermann': AMENT_PREFIX_PATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/vesc_ackermann
+[69.927s] -- Install configuration: ""
+[69.928s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/lib/vesc_ackermann/ackermann_to_vesc_node
+[69.932s] -- Set runtime path of "/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/lib/vesc_ackermann/ackermann_to_vesc_node" to ""
+[69.933s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/lib/vesc_ackermann/vesc_to_odom_node
+[69.938s] -- Set runtime path of "/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/lib/vesc_ackermann/vesc_to_odom_node" to ""
+[69.938s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/include
+[69.939s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/include/vesc_ackermann
+[69.939s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/include/vesc_ackermann/vesc_to_odom.hpp
+[69.940s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/include/vesc_ackermann/ackermann_to_vesc.hpp
+[69.941s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/share/vesc_ackermann/environment/library_path.sh
+[69.942s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/share/vesc_ackermann/environment/library_path.dsv
+[69.943s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/lib/libvesc_ackermann.so
+[70.003s] -- Set runtime path of "/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/lib/libvesc_ackermann.so" to ""
+[70.004s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/share/vesc_ackermann/launch
+[70.004s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/share/vesc_ackermann/launch/vesc_to_odom_node.launch.xml
+[70.007s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/share/vesc_ackermann/launch/ackermann_to_vesc_node.launch.xml
+[70.009s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/share/ament_index/resource_index/package_run_dependencies/vesc_ackermann
+[70.010s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/share/ament_index/resource_index/parent_prefix_path/vesc_ackermann
+[70.011s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/share/vesc_ackermann/environment/ament_prefix_path.sh
+[70.012s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/share/vesc_ackermann/environment/ament_prefix_path.dsv
+[70.013s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/share/vesc_ackermann/environment/path.sh
+[70.014s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/share/vesc_ackermann/environment/path.dsv
+[70.014s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/share/vesc_ackermann/local_setup.bash
+[70.015s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/share/vesc_ackermann/local_setup.sh
+[70.016s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/share/vesc_ackermann/local_setup.zsh
+[70.017s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/share/vesc_ackermann/local_setup.dsv
+[70.018s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/share/vesc_ackermann/package.dsv
+[70.019s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/share/ament_index/resource_index/packages/vesc_ackermann
+[70.020s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/share/ament_index/resource_index/rclcpp_components/vesc_ackermann
+[70.021s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/share/vesc_ackermann/cmake/ament_cmake_export_dependencies-extras.cmake
+[70.022s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/share/vesc_ackermann/cmake/ament_cmake_export_include_directories-extras.cmake
+[70.022s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/share/vesc_ackermann/cmake/ament_cmake_export_libraries-extras.cmake
+[70.023s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/share/vesc_ackermann/cmake/vesc_ackermannConfig.cmake
+[70.024s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/share/vesc_ackermann/cmake/vesc_ackermannConfig-version.cmake
+[70.025s] -- Installing: /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_ackermann/share/vesc_ackermann/package.xml
+[70.039s] Invoked command in '/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/vesc_ackermann' returned '0': AMENT_PREFIX_PATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/vesc_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/vesc_ackermann

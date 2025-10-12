@@ -1,0 +1,33 @@
+[2.936s] Invoking command in '/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/FTG_node': PYTHONPATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/FTG_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/FTG_node/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/FTG_node build --build-base /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/FTG_node/build install --record /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/FTG_node/install.log --install-scripts $base/lib/FTG_node --single-version-externally-managed install_data
+[3.919s] running egg_info
+[3.922s] creating ../build/FTG_node/FTG_node.egg-info
+[3.923s] writing ../build/FTG_node/FTG_node.egg-info/PKG-INFO
+[3.926s] writing dependency_links to ../build/FTG_node/FTG_node.egg-info/dependency_links.txt
+[3.927s] writing entry points to ../build/FTG_node/FTG_node.egg-info/entry_points.txt
+[3.928s] writing requirements to ../build/FTG_node/FTG_node.egg-info/requires.txt
+[3.928s] writing top-level names to ../build/FTG_node/FTG_node.egg-info/top_level.txt
+[3.944s] writing manifest file '../build/FTG_node/FTG_node.egg-info/SOURCES.txt'
+[4.121s] reading manifest file '../build/FTG_node/FTG_node.egg-info/SOURCES.txt'
+[4.125s] writing manifest file '../build/FTG_node/FTG_node.egg-info/SOURCES.txt'
+[4.125s] running build
+[4.126s] running build_py
+[4.126s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/FTG_node/build
+[4.127s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/FTG_node/build/lib
+[4.127s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/FTG_node/build/lib/FTG_node
+[4.127s] copying FTG_node/__init__.py -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/FTG_node/build/lib/FTG_node
+[4.128s] running install
+[4.131s] running install_lib
+[4.136s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/FTG_node/lib/python3.8/site-packages/FTG_node
+[4.137s] copying /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/FTG_node/build/lib/FTG_node/__init__.py -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/FTG_node/lib/python3.8/site-packages/FTG_node
+[4.139s] byte-compiling /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/FTG_node/lib/python3.8/site-packages/FTG_node/__init__.py to __init__.cpython-38.pyc
+[4.144s] running install_data
+[4.155s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/FTG_node/share/ament_index
+[4.155s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/FTG_node/share/ament_index/resource_index
+[4.157s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/FTG_node/share/ament_index/resource_index/packages
+[4.157s] copying resource/FTG_node -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/FTG_node/share/ament_index/resource_index/packages
+[4.166s] copying package.xml -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/FTG_node/share/FTG_node
+[4.166s] running install_egg_info
+[4.167s] Copying ../build/FTG_node/FTG_node.egg-info to /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/FTG_node/lib/python3.8/site-packages/FTG_node-0.0.0-py3.8.egg-info
+[4.183s] running install_scripts
+[4.258s] writing list of installed files to '/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/FTG_node/install.log'
+[4.374s] Invoked command in '/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/FTG_node' returned '0': PYTHONPATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/FTG_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/FTG_node/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/FTG_node build --build-base /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/FTG_node/build install --record /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/FTG_node/install.log --install-scripts $base/lib/FTG_node --single-version-externally-managed install_data

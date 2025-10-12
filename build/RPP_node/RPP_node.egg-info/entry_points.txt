@@ -1,0 +1,3 @@
+[console_scripts]
+rpp_node_executable = RPP_node.rpp_node:main
+

@@ -1,0 +1,45 @@
+[3.621s] Invoking command in '/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/f1tenth_system/teleop_tools/joy_teleop': AMENT_PREFIX_PATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/teleop_tools_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/teleop_tools_msgs LD_LIBRARY_PATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/teleop_tools_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/joy_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/joy_teleop/lib/python3.8/site-packages:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/teleop_tools_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/joy_teleop build --build-base /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/joy_teleop/build install --record /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/joy_teleop/install.log --install-scripts $base/lib/joy_teleop --single-version-externally-managed install_data
+[4.624s] running egg_info
+[4.627s] creating ../../../build/joy_teleop/joy_teleop.egg-info
+[4.629s] writing ../../../build/joy_teleop/joy_teleop.egg-info/PKG-INFO
+[4.629s] writing dependency_links to ../../../build/joy_teleop/joy_teleop.egg-info/dependency_links.txt
+[4.630s] writing entry points to ../../../build/joy_teleop/joy_teleop.egg-info/entry_points.txt
+[4.630s] writing requirements to ../../../build/joy_teleop/joy_teleop.egg-info/requires.txt
+[4.630s] writing top-level names to ../../../build/joy_teleop/joy_teleop.egg-info/top_level.txt
+[4.635s] writing manifest file '../../../build/joy_teleop/joy_teleop.egg-info/SOURCES.txt'
+[4.780s] reading manifest file '../../../build/joy_teleop/joy_teleop.egg-info/SOURCES.txt'
+[4.785s] writing manifest file '../../../build/joy_teleop/joy_teleop.egg-info/SOURCES.txt'
+[4.786s] running build
+[4.786s] running build_py
+[4.787s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/joy_teleop/build
+[4.788s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/joy_teleop/build/lib
+[4.789s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/joy_teleop/build/lib/joy_teleop
+[4.789s] copying joy_teleop/incrementer_server.py -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/joy_teleop/build/lib/joy_teleop
+[4.794s] copying joy_teleop/__init__.py -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/joy_teleop/build/lib/joy_teleop
+[4.795s] copying joy_teleop/joy_teleop.py -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/joy_teleop/build/lib/joy_teleop
+[4.796s] running install
+[4.800s] running install_lib
+[4.804s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/joy_teleop/lib/python3.8/site-packages/joy_teleop
+[4.805s] copying /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/joy_teleop/build/lib/joy_teleop/incrementer_server.py -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/joy_teleop/lib/python3.8/site-packages/joy_teleop
+[4.806s] copying /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/joy_teleop/build/lib/joy_teleop/__init__.py -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/joy_teleop/lib/python3.8/site-packages/joy_teleop
+[4.807s] copying /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/joy_teleop/build/lib/joy_teleop/joy_teleop.py -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/joy_teleop/lib/python3.8/site-packages/joy_teleop
+[4.811s] byte-compiling /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/joy_teleop/lib/python3.8/site-packages/joy_teleop/incrementer_server.py to incrementer_server.cpython-38.pyc
+[4.818s] byte-compiling /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/joy_teleop/lib/python3.8/site-packages/joy_teleop/__init__.py to __init__.cpython-38.pyc
+[4.819s] byte-compiling /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/joy_teleop/lib/python3.8/site-packages/joy_teleop/joy_teleop.py to joy_teleop.cpython-38.pyc
+[4.830s] running install_data
+[4.831s] copying package.xml -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/joy_teleop/share/joy_teleop
+[4.834s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/joy_teleop/share/joy_teleop/config
+[4.834s] copying config/joy_teleop_example.yaml -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/joy_teleop/share/joy_teleop/config
+[4.836s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/joy_teleop/share/joy_teleop/launch
+[4.836s] copying launch/example.launch.py -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/joy_teleop/share/joy_teleop/launch
+[4.838s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/joy_teleop/share/ament_index
+[4.838s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/joy_teleop/share/ament_index/resource_index
+[4.839s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/joy_teleop/share/ament_index/resource_index/packages
+[4.839s] copying resource/joy_teleop -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/joy_teleop/share/ament_index/resource_index/packages
+[4.840s] running install_egg_info
+[4.848s] Copying ../../../build/joy_teleop/joy_teleop.egg-info to /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/joy_teleop/lib/python3.8/site-packages/joy_teleop-0.3.0-py3.8.egg-info
+[4.852s] running install_scripts
+[4.926s] Installing incrementer_server script to /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/joy_teleop/lib/joy_teleop
+[4.926s] Installing joy_teleop script to /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/joy_teleop/lib/joy_teleop
+[4.928s] writing list of installed files to '/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/joy_teleop/install.log'
+[5.036s] Invoked command in '/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/f1tenth_system/teleop_tools/joy_teleop' returned '0': AMENT_PREFIX_PATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/teleop_tools_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/teleop_tools_msgs LD_LIBRARY_PATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/teleop_tools_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/joy_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/joy_teleop/lib/python3.8/site-packages:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/teleop_tools_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/joy_teleop build --build-base /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/joy_teleop/build install --record /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/joy_teleop/install.log --install-scripts $base/lib/joy_teleop --single-version-externally-managed install_data

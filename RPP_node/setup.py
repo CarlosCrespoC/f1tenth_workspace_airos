@@ -27,6 +27,7 @@ setup(
     entry_points={
         'console_scripts': [
             'rpp_node_executable = RPP_node.rpp_node:main',
+            'rpp_node_executable_2 = RPP_noed.rpp_node_2:main',
         ],
     },
 )

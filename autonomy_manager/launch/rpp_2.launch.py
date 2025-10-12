@@ -24,7 +24,7 @@ def generate_launch_description():
 
     rpp_node = Node(
         package='RPP_node',
-        executable='rpp_node_2.py',
+        executable='rpp_node_executable_2',
         name='rpp_follower',
         output='screen',
         parameters=[
