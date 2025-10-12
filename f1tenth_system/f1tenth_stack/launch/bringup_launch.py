@@ -50,7 +50,7 @@ def generate_launch_description():
     mux_config = os.path.join(
         get_package_share_directory('f1tenth_stack'),
         'config',
-        'mux.yaml'
+        'ackermann_mux_topics.yaml'
     )
 
     joy_la = DeclareLaunchArgument(
