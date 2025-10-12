@@ -112,7 +112,7 @@ class WaypointFollower(Node):
         self.autonomous_active: bool = g("autonomous_start").get_parameter_value().bool_value
 
         # ------------ Estado ------------
-        self.actual_path = deque(maxlen=self.actual_path_len)
+        self._actual_path = deque(maxlen=self.actual_path_len)
         self.have_odom = False
         self.last_odom_t = 0.0
         self.x = self.y = self.yaw = 0.0
