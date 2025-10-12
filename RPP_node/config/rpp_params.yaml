@@ -3,7 +3,7 @@ rpp_follower:
   ros__parameters:
     # --- Topics y Configuración Base ---
     # El topic de odometría del coche real (no de la simulación)
-    topic_odom: "/odom"
+    topic_odom: "/amcl_pose"
     # El topic de comandos será redirigido en el launch, no necesita valor aquí
     topic_cmd: "/drive"
     # El wheelbase del F1TENTH
