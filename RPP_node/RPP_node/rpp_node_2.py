@@ -11,13 +11,13 @@ from rclpy.node import Node
 from rclpy.qos import QoSProfile, ReliabilityPolicy, DurabilityPolicy, HistoryPolicy
 
 from nav_msgs.msg import Odometry, Path as PathMsg
-from geometry_msgs.msg import PoseStamped, Point
+from geometry_msgs.msg import PoseStamped, Point, PoseWithCovarianceStamped
 from ackermann_msgs.msg import AckermannDriveStamped
 from visualization_msgs.msg import Marker, MarkerArray
 from sensor_msgs.msg import LaserScan
 from sensor_msgs.msg import Joy
 
-BUILD_TAG = "rpp_node_pp_csv r5"
+BUILD_TAG = "rpp_node_pp_csv r6_amcl"
 
 def clamp(x, a, b): return max(a, min(b, x))
 def yaw_from_quat(qx, qy, qz, qw):
@@ -34,6 +34,12 @@ class WaypointFollower(Node):
         # ------------ Parámetros ------------
         self.declare_parameter("topic_odom", "/odom")
         self.declare_parameter("topic_cmd",  "/autonomous")
+        
+        # NUEVO: Parámetros de localización
+        self.declare_parameter("use_amcl", True)
+        self.declare_parameter("topic_amcl", "/amcl_pose")
+        self.declare_parameter("amcl_timeout", 2.0)
+        self.declare_parameter("amcl_priority", True)  # True = AMCL prioritario, False = odometría prioritaria
 
         self.declare_parameter("rate_hz", 50.0)
         self.declare_parameter("wheelbase", 0.33)
@@ -65,16 +71,22 @@ class WaypointFollower(Node):
         self.declare_parameter("actual_path_len", 4000)
         self.declare_parameter("actual_path_frame", "")
 
-        # Gate por joystick (integrado aquí)
+        # Gate por joystick
         self.declare_parameter("joy_topic", "/joy")
-        self.declare_parameter("r1_button_index", 5)  # PS4: R1=5
-        self.declare_parameter("x_button_index", 0)   # PS4: X=0
+        self.declare_parameter("r1_button_index", 5)
+        self.declare_parameter("x_button_index", 0)
         self.declare_parameter("autonomous_start", False)
 
         # ------------ Leer parámetros ------------
         g = self.get_parameter
         self.topic_odom: str = g("topic_odom").get_parameter_value().string_value
         self.topic_cmd:  str = g("topic_cmd").get_parameter_value().string_value
+        
+        # NUEVO: Localización
+        self.use_amcl: bool = g("use_amcl").get_parameter_value().bool_value
+        self.topic_amcl: str = g("topic_amcl").get_parameter_value().string_value
+        self.amcl_timeout: float = g("amcl_timeout").get_parameter_value().double_value
+        self.amcl_priority: bool = g("amcl_priority").get_parameter_value().bool_value
 
         self.rate_hz: float   = g("rate_hz").get_parameter_value().double_value
         self.L: float         = g("wheelbase").get_parameter_value().double_value
@@ -113,9 +125,21 @@ class WaypointFollower(Node):
 
         # ------------ Estado ------------
         self.actual_path = deque(maxlen=self.actual_path_len)
+        
+        # Odometría
         self.have_odom = False
         self.last_odom_t = 0.0
+        self.x_odom = self.y_odom = self.yaw_odom = 0.0
+        
+        # AMCL
+        self.have_amcl = False
+        self.last_amcl_t = 0.0
+        self.x_amcl = self.y_amcl = self.yaw_amcl = 0.0
+        
+        # Pose actual (fusionada)
         self.x = self.y = self.yaw = 0.0
+        self.using_amcl = False  # Flag para saber qué fuente se está usando
+        
         self.v_pub = 0.0
         self.nearest_idx = 0
         self.prev_idx = 0
@@ -129,7 +153,6 @@ class WaypointFollower(Node):
         self._last_x = 0
 
         # ------------ Pub/Sub ------------
-        # /drive suele ser BEST_EFFORT en el mux
         qos_drive = QoSProfile(depth=10,
                                reliability=ReliabilityPolicy.BEST_EFFORT,
                                durability=DurabilityPolicy.VOLATILE)
@@ -146,10 +169,21 @@ class WaypointFollower(Node):
         self.pub_avoid_markers = self.create_publisher(MarkerArray, "/rpp/avoidance", 10)
         self.pub_path_actual  = self.create_publisher(PathMsg, "/rpp/actual_path", 10)
 
+        # Suscripciones
         self.sub_odom = self.create_subscription(Odometry, self.topic_odom, self._odom_cb, 20)
+        
+        # NUEVO: Subscribe a AMCL si está habilitado
+        if self.use_amcl:
+            self.sub_amcl = self.create_subscription(
+                PoseWithCovarianceStamped, 
+                self.topic_amcl, 
+                self._amcl_cb, 
+                10
+            )
+        
         if self.use_scan:
             self.sub_scan = self.create_subscription(LaserScan, self.scan_topic, self._scan_cb, 10)
-        # Joy gate integrado
+        
         self.sub_joy = self.create_subscription(Joy, self.joy_topic, self._joy_cb, 10)
 
         # ------------ Cargar CSV y publicar path global ------------
@@ -165,22 +199,84 @@ class WaypointFollower(Node):
         self.timer = self.create_timer(1.0 / max(1.0, self.rate_hz), self._on_timer)
         self.timer_rep = self.create_timer(1.0, self._republish_static)
 
+        loc_mode = "AMCL+Odom" if self.use_amcl else "Odom only"
         self.get_logger().info(
-            f"{BUILD_TAG} | pub-> {self.topic_cmd} | sub<- {self.topic_odom},{self.scan_topic if self.use_scan else '∅'},{self.joy_topic} | "
-            f"csv={self.csv_path} (pts={len(self.waypoints)}) | frame={self.path_frame} | auto={'ON' if self.autonomous_active else 'OFF'}"
+            f"{BUILD_TAG} | pub-> {self.topic_cmd} | sub<- {self.topic_odom}"
+            f"{','+self.topic_amcl if self.use_amcl else ''},{self.scan_topic if self.use_scan else '∅'},{self.joy_topic} | "
+            f"csv={self.csv_path} (pts={len(self.waypoints)}) | frame={self.path_frame} | "
+            f"localization={loc_mode} | auto={'ON' if self.autonomous_active else 'OFF'}"
         )
+
+    # ------------ NUEVO: Callback AMCL ------------
+    def _amcl_cb(self, msg: PoseWithCovarianceStamped):
+        """Callback para recibir pose de AMCL"""
+        self.x_amcl = msg.pose.pose.position.x
+        self.y_amcl = msg.pose.pose.position.y
+        q = msg.pose.pose.orientation
+        self.yaw_amcl = yaw_from_quat(q.x, q.y, q.z, q.w)
+        self.have_amcl = True
+        self.last_amcl_t = self.get_clock().now().nanoseconds * 1e-9
+
+    # ------------ NUEVO: Fusión de localización ------------
+    def _update_pose(self):
+        """
+        Actualiza la pose actual fusionando AMCL y odometría.
+        Estrategia:
+        - Si use_amcl=True y AMCL está disponible y no ha expirado -> usa AMCL
+        - Si no, usa odometría
+        """
+        now = self.get_clock().now().nanoseconds * 1e-9
+        
+        # Verificar disponibilidad de AMCL
+        amcl_ok = (self.use_amcl and 
+                   self.have_amcl and 
+                   (now - self.last_amcl_t) <= self.amcl_timeout)
+        
+        # Verificar disponibilidad de odometría
+        odom_ok = self.have_odom and (now - self.last_odom_t) <= self.odom_timeout
+        
+        # Decidir qué fuente usar
+        if self.amcl_priority:
+            # Prioridad a AMCL
+            if amcl_ok:
+                self.x = self.x_amcl
+                self.y = self.y_amcl
+                self.yaw = self.yaw_amcl
+                self.using_amcl = True
+            elif odom_ok:
+                self.x = self.x_odom
+                self.y = self.y_odom
+                self.yaw = self.yaw_odom
+                self.using_amcl = False
+            else:
+                # Sin localización válida
+                return False
+        else:
+            # Prioridad a odometría
+            if odom_ok:
+                self.x = self.x_odom
+                self.y = self.y_odom
+                self.yaw = self.yaw_odom
+                self.using_amcl = False
+            elif amcl_ok:
+                self.x = self.x_amcl
+                self.y = self.y_amcl
+                self.yaw = self.yaw_amcl
+                self.using_amcl = True
+            else:
+                return False
+        
+        return True
 
     # ------------ Joy gate ------------
     def _joy_cb(self, msg: Joy):
         r1 = 1 if (self.r1_button_index < len(msg.buttons) and msg.buttons[self.r1_button_index] == 1) else 0
         x  = 1 if (self.x_button_index  < len(msg.buttons) and msg.buttons[self.x_button_index]  == 1) else 0
 
-        # Toggle con flanco de subida en R1
         if r1 == 1 and self._last_r1 == 0:
             self.autonomous_active = not self.autonomous_active
             self.get_logger().info(f"Autonomía {'ACTIVADA' if self.autonomous_active else 'DESACTIVADA'} (R1)")
 
-        # X desactiva
         if x == 1 and self._last_x == 0:
             if self.autonomous_active:
                 self.autonomous_active = False
@@ -274,10 +370,11 @@ class WaypointFollower(Node):
 
     # ------------ Callbacks ------------
     def _odom_cb(self, msg: Odometry):
-        self.x = msg.pose.pose.position.x
-        self.y = msg.pose.pose.position.y
+        """Callback para odometría (ahora guarda en variables separadas)"""
+        self.x_odom = msg.pose.pose.position.x
+        self.y_odom = msg.pose.pose.position.y
         q = msg.pose.pose.orientation
-        self.yaw = yaw_from_quat(q.x, q.y, q.z, q.w)
+        self.yaw_odom = yaw_from_quat(q.x, q.y, q.z, q.w)
         self.have_odom = True
         self.last_odom_t = self.get_clock().now().nanoseconds * 1e-9
 
@@ -337,7 +434,8 @@ class WaypointFollower(Node):
             if lap_time >= self.min_lap_time_s:
                 self.lap_times.append(lap_time)
                 lap_no = len(self.lap_times)
-                msg = f"🏁 Lap {lap_no:02d} | {lap_time:6.2f}s"
+                loc_src = "AMCL" if self.using_amcl else "Odom"
+                msg = f"🏁 Lap {lap_no:02d} | {lap_time:6.2f}s | loc={loc_src}"
                 if self.best_lap is None or lap_time < self.best_lap:
                     self.best_lap = lap_time; msg += " | 🥇 best"
                 self.get_logger().info(msg)
@@ -347,10 +445,12 @@ class WaypointFollower(Node):
     # ------------ Loop principal ------------
     def _on_timer(self):
         now = self.get_clock().now().nanoseconds * 1e-9
-        odom_ok = self.have_odom and (now - self.last_odom_t) <= self.odom_timeout
+        
+        # NUEVO: Actualizar pose fusionada
+        pose_ok = self._update_pose()
 
-        # Rampa de velocidad: si autonomía está OFF, target=0
-        v_target = (self.v_des if (odom_ok and self.autonomous_active) else 0.0)
+        # Rampa de velocidad
+        v_target = (self.v_des if (pose_ok and self.autonomous_active) else 0.0)
         dv_max = self.ramp_rate / max(1.0, self.rate_hz)
         if self.v_pub < v_target: self.v_pub = min(self.v_pub + dv_max, v_target)
         else:                      self.v_pub = max(self.v_pub - dv_max, v_target)
@@ -360,7 +460,7 @@ class WaypointFollower(Node):
         cmd.drive.speed = float(self.v_pub)
         cmd.drive.steering_angle = 0.0
 
-        if len(self.waypoints) < 3 or (not odom_ok):
+        if len(self.waypoints) < 3 or (not pose_ok):
             self.pub_cmd.publish(cmd)
             return
 
@@ -421,60 +521,3 @@ class WaypointFollower(Node):
             pmsg.header.frame_id = self.actual_path_frame if self.actual_path_frame else self.actual_path[-1].header.frame_id
             pmsg.header.stamp = self.get_clock().now().to_msg()
             pmsg.poses = list(self.actual_path)
-            self.pub_path_actual.publish(pmsg)
-
-    # ---------- Gap helpers ----------
-    def _front_sector_indices(self, msg: LaserScan) -> Tuple[int, int]:
-        half = math.radians(self.sector_deg) * 0.5
-        a0 = msg.angle_min
-        inc = msg.angle_increment if msg.angle_increment != 0.0 else 1e-3
-        start = max(0, int(( -half - a0) / inc))
-        end   = min(len(msg.ranges)-1, int(( +half - a0) / inc))
-        return start, end
-
-    def _largest_safe_gap(self, msg: LaserScan, start: int, end: int) -> Optional[Tuple[int, int]]:
-        safe = self.danger_dist + self.gap_margin
-        min_count = max(1, int(math.radians(self.min_gap_deg) / max(msg.angle_increment, 1e-6)))
-        best_len, best_s, best_e = 0, None, None
-        cur_s = None
-        for i in range(start, end+1):
-            r = msg.ranges[i]
-            ok = (not math.isinf(r)) and (not math.isnan(r)) and (r >= safe)
-            if ok:
-                if cur_s is None: cur_s = i
-            else:
-                if cur_s is not None:
-                    L = i - cur_s
-                    if L >= min_count and L > best_len:
-                        best_len, best_s, best_e = L, cur_s, i-1
-                    cur_s = None
-        if cur_s is not None:
-            L = (end+1) - cur_s
-            if L >= min_count and L > best_len:
-                best_len, best_s, best_e = L, cur_s, end
-        if best_s is None: return None
-        return best_s, best_e
-
-    def _gap_midpoint_target(self, msg: LaserScan, s_idx: int, e_idx: int, Ld: float) -> Tuple[float, float]:
-        mid = (s_idx + e_idx) // 2
-        ang = msg.angle_min + mid * msg.angle_increment
-        xt_local = Ld * math.cos(ang)
-        yt_local = Ld * math.sin(ang)
-        c = math.cos(self.yaw); s = math.sin(self.yaw)
-        xt = self.x + c*xt_local - s*yt_local
-        yt = self.y + s*xt_local + c*yt_local
-        return xt, yt
-
-def main(args: Optional[list] = None) -> None:
-    rclpy.init(args=args)
-    node = WaypointFollower()
-    try:
-        rclpy.spin(node)
-    except KeyboardInterrupt:
-        pass
-    finally:
-        node.destroy_node()
-        rclpy.shutdown()
-
-if __name__ == "__main__":
-    main()
