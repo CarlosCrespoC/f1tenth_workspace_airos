@@ -3,7 +3,6 @@ from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch_ros.actions import Node
 from launch.actions import DeclareLaunchArgument
-# CAMBIO: Se añade PythonExpression a los imports
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution, PythonExpression
 from launch.conditions import IfCondition
 
@@ -27,11 +26,15 @@ def generate_launch_description():
         executable='rpp_node_executable',
         name='rpp_follower',
         output='screen',
+        # --- REMAPPING CRÍTICO ---
+        # Conecta la salida del algoritmo al gestor de autonomía.
+        remappings=[
+            ('/drive', '/algo_drive_raw')
+        ],
         parameters=[
             rpp_params_path,
             {'waypoints_csv': rpp_waypoints_path}
         ],
-        # CAMBIO: Se reemplaza la condición por la versión con PythonExpression
         condition=IfCondition(
             PythonExpression(["'", LaunchConfiguration('algorithm'), "' == 'rpp'"])
         )
