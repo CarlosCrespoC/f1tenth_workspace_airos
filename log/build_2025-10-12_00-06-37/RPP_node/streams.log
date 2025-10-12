@@ -1,0 +1,47 @@
+[3.384s] Invoking command in '/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/RPP_node': PYTHONPATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/RPP_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/RPP_node/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/RPP_node build --build-base /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/RPP_node/build install --record /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/RPP_node/install.log --install-scripts $base/lib/RPP_node --single-version-externally-managed install_data
+[6.176s] running egg_info
+[6.197s] creating ../build/RPP_node/RPP_node.egg-info
+[6.203s] writing ../build/RPP_node/RPP_node.egg-info/PKG-INFO
+[6.205s] writing dependency_links to ../build/RPP_node/RPP_node.egg-info/dependency_links.txt
+[6.210s] writing entry points to ../build/RPP_node/RPP_node.egg-info/entry_points.txt
+[6.212s] writing requirements to ../build/RPP_node/RPP_node.egg-info/requires.txt
+[6.216s] writing top-level names to ../build/RPP_node/RPP_node.egg-info/top_level.txt
+[6.227s] writing manifest file '../build/RPP_node/RPP_node.egg-info/SOURCES.txt'
+[7.049s] reading manifest file '../build/RPP_node/RPP_node.egg-info/SOURCES.txt'
+[7.070s] writing manifest file '../build/RPP_node/RPP_node.egg-info/SOURCES.txt'
+[7.098s] running build
+[7.099s] running build_py
+[7.100s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/RPP_node/build
+[7.102s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/RPP_node/build/lib
+[7.106s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/RPP_node/build/lib/RPP_node
+[7.110s] copying RPP_node/rpp_node.py -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/RPP_node/build/lib/RPP_node
+[7.135s] copying RPP_node/__init__.py -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/RPP_node/build/lib/RPP_node
+[7.151s] copying RPP_node/rpp_node_2.py -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/RPP_node/build/lib/RPP_node
+[7.160s] running install
+[7.190s] running install_lib
+[7.220s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/RPP_node/lib/python3.8/site-packages/RPP_node
+[7.240s] copying /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/RPP_node/build/lib/RPP_node/rpp_node.py -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/RPP_node/lib/python3.8/site-packages/RPP_node
+[7.255s] copying /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/RPP_node/build/lib/RPP_node/__init__.py -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/RPP_node/lib/python3.8/site-packages/RPP_node
+[7.263s] copying /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/RPP_node/build/lib/RPP_node/rpp_node_2.py -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/RPP_node/lib/python3.8/site-packages/RPP_node
+[7.268s] byte-compiling /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/RPP_node/lib/python3.8/site-packages/RPP_node/rpp_node.py to rpp_node.cpython-38.pyc
+[7.439s] byte-compiling /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/RPP_node/lib/python3.8/site-packages/RPP_node/__init__.py to __init__.cpython-38.pyc
+[7.455s] byte-compiling /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/RPP_node/lib/python3.8/site-packages/RPP_node/rpp_node_2.py to rpp_node_2.cpython-38.pyc
+[7.516s] running install_data
+[7.550s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/RPP_node/share/ament_index
+[7.551s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/RPP_node/share/ament_index/resource_index
+[7.552s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/RPP_node/share/ament_index/resource_index/packages
+[7.552s] copying resource/RPP_node -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/RPP_node/share/ament_index/resource_index/packages
+[7.553s] copying package.xml -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/RPP_node/share/RPP_node
+[7.553s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/RPP_node/share/RPP_node/launch
+[7.554s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/RPP_node/share/RPP_node/config
+[7.554s] copying config/rpp_params.yaml -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/RPP_node/share/RPP_node/config
+[7.556s] creating /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/RPP_node/share/RPP_node/waypoints
+[7.557s] copying waypoints/mapa1.csv -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/RPP_node/share/RPP_node/waypoints
+[7.557s] copying waypoints/crespo.csv -> /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/RPP_node/share/RPP_node/waypoints
+[7.558s] running install_egg_info
+[7.574s] Copying ../build/RPP_node/RPP_node.egg-info to /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/RPP_node/lib/python3.8/site-packages/RPP_node-0.0.0-py3.8.egg-info
+[7.589s] running install_scripts
+[8.076s] Installing rpp_node_executable script to /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/RPP_node/lib/RPP_node
+[8.078s] Installing rpp_node_executable_2 script to /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/RPP_node/lib/RPP_node
+[8.081s] writing list of installed files to '/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/RPP_node/install.log'
+[8.415s] Invoked command in '/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/RPP_node' returned '0': PYTHONPATH=/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/RPP_node/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/install/RPP_node/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/RPP_node build --build-base /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/RPP_node/build install --record /home/jetson/f1tenth2_ws/src/f1tenth_workspace_airos/build/RPP_node/install.log --install-scripts $base/lib/RPP_node --single-version-externally-managed install_data

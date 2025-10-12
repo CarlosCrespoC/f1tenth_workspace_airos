@@ -1,0 +1,3 @@
+[console_scripts]
+autonomy_manager_node = autonomy_manager.autonomy_manager_node:main
+
