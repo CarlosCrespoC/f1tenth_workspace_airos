@@ -1,3 +1,5 @@
+# Contenido COMPLETO y CORRECTO para joy_teleop.yaml
+
 joy:
   ros__parameters:
     device_name: "DualSense Wireless Controller"
@@ -8,35 +10,29 @@ joy:
 
 joy_teleop:
   ros__parameters:
-    # Este modo 'default' no se usa porque siempre se mantiene presionado L1.
-    # Se puede dejar como está, no afecta.
-    default:
-      type: topic
-      interface_type: ackermann_msgs/msg/AckermannDriveStamped
-      topic_name: teleop
-      axis_mappings:
-        drive-speed:
-          axis: 1
-          scale: 0.0
-          offset: 0.0
-        drive-steering_angle:
-          axis: 2
-          scale: 0.0
-          offset: 0.0
-
-    # Esta es ahora la ÚNICA sección de control activa.
+    # Perfil para el control manual
     human_control:
       type: topic
       interface_type: ackermann_msgs/msg/AckermannDriveStamped
-      topic_name: teleop
-      # Requiere mantener presionado L1 (botón 4) para conducir manualmente.
-      deadman_buttons: [4]
+      topic_name: /teleop
+      deadman_buttons: [4]  # Botón L1
       axis_mappings:
         drive-speed:
           axis: 1
-          scale: 5.0  # Ajusta la velocidad máxima manual aquí
+          scale: 5.0
           offset: 0.0
         drive-steering_angle:
           axis: 2
-          scale: 0.34 # Ajusta la sensibilidad de la dirección aquí
+          scale: 0.34
           offset: 0.0
+
+    # Perfil para la PARADA DE EMERGENCIA
+    emergency_stop:
+      type: topic
+      interface_type: ackermann_msgs/msg/AckermannDriveStamped
+      topic_name: /emergency_stop
+      deadman_buttons: [1]  # Botón 'X' (índice 1)
+      axis_mappings:
+        # Forzamos la velocidad y el giro a cero
+        drive-speed: { axis: 1, scale: 0.0, offset: 0.0 }
+        drive-steering_angle: { axis: 2, scale: 0.0, offset: 0.0 }

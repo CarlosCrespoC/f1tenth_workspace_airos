@@ -264,7 +264,6 @@ class WaypointFollower(Node):
             self._publish_global_path()
             if self.publish_markers:
                 self._publish_waypoint_markers()
-                # Hola
 
     # ---------- Odom & LIDAR ----------
     def _odom_cb(self, msg: PoseWithCovarianceStamped):

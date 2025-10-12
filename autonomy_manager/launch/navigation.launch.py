@@ -19,7 +19,7 @@ def generate_launch_description():
     rpp_share = get_package_share_directory('RPP_node')
     rpp_params_path = os.path.join(rpp_share, 'config', 'rpp_params.yaml')
     rpp_waypoints_path = PathJoinSubstitution([
-        rpp_share, 'waypoints', LaunchConfiguration('waypoints_csv', default='mapa1.csv')
+        rpp_share, 'waypoints', LaunchConfiguration('waypoints_csv', default='crespo.csv')
     ])
 
     rpp_node = Node(
