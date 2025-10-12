@@ -12,6 +12,7 @@ from rclpy.node import Node
 from rclpy.qos import QoSProfile, ReliabilityPolicy, DurabilityPolicy, HistoryPolicy
 
 from nav_msgs.msg import Odometry, Path as PathMsg
+from geometry_msgs.msg import PoseStamped, Point, PoseWithCovarianceStamped
 from geometry_msgs.msg import PoseStamped, Point
 from ackermann_msgs.msg import AckermannDriveStamped
 from visualization_msgs.msg import Marker, MarkerArray
@@ -140,7 +141,7 @@ class WaypointFollower(Node):
         # Marcadores de evitación (objetivo temporal)
         self.pub_avoid_markers = self.create_publisher(MarkerArray, "/rpp/avoidance", 10)
 
-        self.sub_odom = self.create_subscription(Odometry, self.topic_odom, self._odom_cb, 20)
+        self.sub_odom = self.create_subscription(PoseWithCovarianceStamped, self.topic_odom, self._odom_cb, 20)
         if self.use_scan:
             self.sub_scan = self.create_subscription(LaserScan, self.scan_topic, self._scan_cb, 10)
 
@@ -265,7 +266,7 @@ class WaypointFollower(Node):
                 self._publish_waypoint_markers()
 
     # ---------- Odom & LIDAR ----------
-    def _odom_cb(self, msg: Odometry):
+    def _odom_cb(self, msg: PoseWithCovarianceStamped):
         self.x = msg.pose.pose.position.x
         self.y = msg.pose.pose.position.y
         q = msg.pose.pose.orientation
