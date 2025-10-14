@@ -16,7 +16,7 @@ rpp_follower:
     
     # --- Parámetros de Pure Pursuit ---
     # El wheelbase del F1TENTH
-    wheelbase: 0.33
+    wheelbase: 0.25
     # Frame del mapa para las visualizaciones
     path_frame: "map"
     odom_timeout: 5.0
