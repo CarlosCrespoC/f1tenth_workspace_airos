@@ -32,17 +32,17 @@ def generate_launch_description():
         name='amcl',
         output='screen',
         parameters=[{'use_sim_time': False,        # <-- Cambia a True si usas simulación
-                     'alpha1': 0.08,
-                     'alpha2': 0.08,
-                     'alpha3': 0.08,
-                     'alpha4': 0.08,
+                     'alpha1': 0.1,
+                     'alpha2': 0.1,
+                     'alpha3': 0.1,
+                     'alpha4': 0.1,
                      'base_frame_id': 'base_link',   # <-- Frame base de tu robot
                      'odom_frame_id': 'odom',        # <-- Frame de odometría
                      'global_frame_id': 'map',       # <-- ¡COMA AÑADIDA AQUÍ!
                      'max_particles': 2000,
                      'min_particles': 500,
                      'update_min_d': 0.01,
-                     'update_min_a': 0.02,
+                     'update_min_a': 0.01,
                      'laser_max_beams': 360
                     }]
     )

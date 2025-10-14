@@ -28,7 +28,7 @@ rpp_follower:
     v_cmd: 1.5                        # Velocidad para el coche real, ajusta según la pista
     
     # AJUSTADO: Límite de dirección aumentado para girar más
-    steer_limit: 0.80                 # Aumentado de 0.41 (23.5°) a 0.50 (28.6°)
+    steer_limit: 1.0                 # Aumentado de 0.41 (23.5°) a 0.50 (28.6°)
     
     ramp_rate: 2.0                    # Aceleración suave (m/s²)
     rate_hz: 50.0                     # Frecuencia de control

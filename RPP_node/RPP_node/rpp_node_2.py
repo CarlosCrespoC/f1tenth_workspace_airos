@@ -207,8 +207,14 @@ class WaypointFollower(Node):
         self.have_amcl = True
         self.last_amcl_t = self.get_clock().now().nanoseconds * 1e-9
 
+        if self.publish_actual_path:
+            ps = PoseStamped()
+            ps.header = msg.header
+            ps.pose = msg.pose.pose
+            self.actual_path.append(ps)
+
     def _update_pose(self):
-        now = self.get_clock().now().nanoseconds * 1e-9
+        '''now = self.get_clock().now().nanoseconds * 1e-9
         amcl_ok = (self.use_amcl and self.have_amcl and (now - self.last_amcl_t) <= self.amcl_timeout)
         odom_ok = self.have_odom and (now - self.last_odom_t) <= self.odom_timeout
         
@@ -231,6 +237,27 @@ class WaypointFollower(Node):
             else:
                 return False
         return True
+        '''
+        now = self.get_clock().now().nanoseconds * 1e-9
+        
+        # Comprueba si los datos de AMCL son recientes y válidos
+        amcl_ok = (self.use_amcl and self.have_amcl and (now - self.last_amcl_t) <= self.amcl_timeout)
+        
+        if amcl_ok:
+            # Si AMCL está bien, actualiza la pose del vehículo con sus datos
+            self.x = self.x_amcl
+            self.y = self.y_amcl
+            self.yaw = self.yaw_amcl
+            self.using_amcl = True
+            return True # Retorna True para indicar que la pose es válida
+        else:
+            # Si no hay datos de AMCL válidos, no se actualiza la pose y 
+            # se retorna False. Esto hará que el vehículo desacelere
+            # de forma controlada en la función _on_timer.
+            self.using_amcl = False
+            return False
+
+        
 
     def _joy_cb(self, msg: Joy):
         r1 = 1 if (self.r1_button_index < len(msg.buttons) and msg.buttons[self.r1_button_index] == 1) else 0
@@ -334,9 +361,9 @@ class WaypointFollower(Node):
         if not self.lap_started and len(self.waypoints) >= 3:
             self.lap_started = True
             self.lap_start_time = self.last_odom_t
-        if self.publish_actual_path:
-            ps = PoseStamped(); ps.header = msg.header; ps.pose = msg.pose.pose
-            self.actual_path.append(ps)
+        # if self.publish_actual_path:
+        #     ps = PoseStamped(); ps.header = msg.header; ps.pose = msg.pose.pose
+        #     self.actual_path.append(ps)
 
     def _scan_cb(self, msg: LaserScan):
         self.last_scan = msg; self.scan_has_data = True
