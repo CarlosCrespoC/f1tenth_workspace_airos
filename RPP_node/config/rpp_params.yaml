@@ -23,7 +23,7 @@ rpp_follower:
     loop_track: true
     
     # AJUSTADO: Lookahead más corto para curvas más cerradas
-    LOOKAHEAD_DIST: 0.8               # Reducido de 2.5 a 1.5 para giros más agresivos
+    LOOKAHEAD_DIST: 1.2               # Reducido de 2.5 a 1.5 para giros más agresivos
     
     v_cmd: 1.5                        # Velocidad para el coche real, ajusta según la pista
     
@@ -42,14 +42,14 @@ rpp_follower:
     # --- Parámetros de Obstacle Avoidance (LIDAR) ---
     use_scan: true
     scan_topic: "/scan"
-    avoid_enabled: false
+    avoid_enabled: true
     
     # AJUSTADO: Parámetros de evasión para tu caso
-    danger_dist: 1.5                  # Distancia a la que se activa la evasión (metros)
-    sector_deg: 120.0                 # Sector frontal a analizar (±60°)
-    min_gap_deg: 8.0                  # Ancho mínimo de gap para ser considerado válido
-    gap_margin: 0.15                  # Margen extra de seguridad en gaps (metros)
-    gap_mix_alpha: 0.7                # Balance: 0.7=70% gap, 30% waypoint
+    danger_dist: 1.0                  # Distancia a la que se activa la evasión (metros)
+    sector_deg: 110.0                 # Sector frontal a analizar (±60°)
+    min_gap_deg: 10.0                  # Ancho mínimo de gap para ser considerado válido
+    gap_margin: 0.25                  # Margen extra de seguridad en gaps (metros)
+    gap_mix_alpha: 0.5                # Balance: 0.7=70% gap, 30% waypoint
                                       # Aumenta para evasión más agresiva (0.8-0.9)
                                       # Reduce para seguir más el path (0.5-0.6)
     
