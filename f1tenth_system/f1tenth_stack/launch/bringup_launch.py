@@ -138,9 +138,9 @@ def generate_launch_description():
         arguments=['0.27', '0.0', '0.11', '0.0', '0.0', '0.0', 'base_link', 'laser']
     )
 
-    rpp_node = Node(
+        rpp_node = Node(
         package='RPP_node',
-        executable='rpp_node_executable_2',   # tu entry point
+        executable='rpp_node_executable',   # rpp_node_executable_2 --  tu entry point
         name='rpp_follower',
         output='screen',
         parameters=[rpp_config, {'waypoints_csv': rpp_waypoints}]
