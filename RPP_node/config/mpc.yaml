@@ -8,7 +8,7 @@ MPC:
     # ==============================================================================
     waypoints_csv: "mapa_lab_way.csv" 
     lidar_topic: "/scan"
-    topic_cmd: "/mpc/drive" # El MUX escuchará este topic para los comandos
+    topic_cmd: "/autonomous"
 
     use_amcl: true                   
     topic_amcl: "/amcl_pose"         
