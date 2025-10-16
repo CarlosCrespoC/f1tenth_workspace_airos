@@ -1,5 +1,5 @@
 # ==============================================================================
-# ==   PARÁMETROS COMPLETOS PARA MPC FOLLOWER (CON INTEGRACIÓN DE AMCL)       ==
+# ==   PARÁMETROS MPC - TUNING PARA ENTORNO REAL (SEGURO Y SUAVE)             ==
 # ==============================================================================
 MPC:
   ros__parameters:
@@ -13,34 +13,37 @@ MPC:
     use_amcl: true                   
     topic_amcl: "/amcl_pose"         
     topic_odom: "/odom"              
-    amcl_timeout: 1.0                
+    amcl_timeout: 2.0                # <-- Aumentado a 2s para mayor robustez ante lags de red.
 
     # ==============================================================================
-    # == Perfil de Velocidad y Tuning (Valores de inicio recomendados) ==
+    # == Perfil de Velocidad y Tuning (Valores conservadores para el mundo real) ==
     # ==============================================================================
-    v_top: 4.5
-    a_lat_max: 4.0
-    a_x_max: 4.0
-    a_x_min: -5.5
+    v_top: 2.5                       # <-- CAMBIO CLAVE: Límite de velocidad máxima según tu requisito.
+    a_lat_max: 2.8                   # <-- CAMBIO CLAVE: Reduce la aceleración lateral máxima. 
+                                     #     Esto fuerza al coche a ser MUCHO más lento y cuidadoso en las curvas.
+    a_x_max: 3.0                     # <-- Reducido para una aceleración longitudinal más suave.
+    a_x_min: -5.5                    # Frenada fuerte sigue siendo permitida por seguridad.
     
     # ==============================================================================
-    # == Costos del MPC (Tuning para suavidad con AMCL) ==
+    # == Costos del MPC (Tuning para MÁXIMA SUAVIDAD) ==
     # ==============================================================================
-    Q_perp: 12.0
-    Q_psi: 7.0
-    Q_v: 2.5
-    R_a: 0.20
-    R_w: 0.25
-    Rd_w: 0.40
+    Q_perp: 12.0                     # Mantiene un buen seguimiento de la línea.
+    Q_psi: 7.0                       # Corrige la orientación de forma decidida.
+    Q_v: 2.5                         # Intenta alcanzar la velocidad objetivo.
+    R_a: 0.25                        # <-- Penaliza el uso brusco del acelerador/freno.
+    R_w: 0.30                        # <-- Aumentado para penalizar giros rápidos, prefiere trayectorias más suaves.
+    Rd_w: 0.50                       # <-- CAMBIO CLAVE: Aumentado significativamente. Penaliza fuertemente
+                                     #     los "volantazos" o cambios bruscos de dirección. Es CRÍTICO para
+                                     #     eliminar oscilaciones (zig-zag) en el robot real.
 
     # ==============================================================================
-    # == Parámetros base del Modelo y Horizonte ==
+    # == Parámetros base del Modelo y Horizonte (Sin cambios) ==
     # ==============================================================================
     L: 0.33
     dt: 0.02
     ds_ref: 0.12
     N: 10
-    steer_alpha: 0.22
+    steer_alpha: 0.22                # Filtro de suavizado adicional para la dirección.
     loop_track: true
     a_min: -5.0
     a_max: 5.0
@@ -58,7 +61,7 @@ MPC:
     lidar_window_deg: 20.0
     a_brake: 12.0
     stop_margin: 0.5
-    use_strategic_cornering: true
+    use_strategic_cornering: true    # Se puede desactivar (false) si causa comportamiento inesperado al inicio.
     corner_kappa_threshold: 0.15
     corner_offset_m: 0.8
     lap_origin_x: 0.0
