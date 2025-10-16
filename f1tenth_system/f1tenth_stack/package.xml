@@ -3,7 +3,7 @@
 <package format="3">
   <name>f1tenth_stack</name>
   <version>0.0.1</version>
-  <description>Onboard drivers for vesc and sensors for F1TENTH vehicles.</description>
+  <description>Onboard drivers for vesc and sensors for F1TENTH vehicles, now including an MPC controller.</description>
   <maintainer email="billyzheng.bz@gmail.com">Hongrui Zheng</maintainer>
   <license>MIT</license>
 
@@ -15,7 +15,11 @@
   <depend>vesc</depend>
   <depend>ackermann_mux</depend>
   <depend>std_msgs</depend>
-
+  
+  <depend>rclpy</depend>
+  <depend>nav_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>
