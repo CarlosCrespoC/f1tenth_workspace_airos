@@ -13,6 +13,12 @@ rpp_follower:
     amcl_timeout: 3.0                 # Segundos sin AMCL antes de usar odometría como fallback
     amcl_priority: true               # true = Priorizar AMCL cuando está disponible
                                       # false = Priorizar odometría, AMCL solo como fallback
+
+    # --- Lookahead Dinámico (NUEVO) ---
+    lookahead_min: 0.8               # Mínimo en curvas lentas
+    lookahead_max: 2.5               # Máximo en rectas rápidas
+    lookahead_gain: 0.4              # Ld = 0.8 + 0.4*v → a 3m/s = 2.0m
+    LOOKAHEAD_DIST: 1.5              # Base (solo usado si no implementas dinámico)
     
     # --- Parámetros de Pure Pursuit ---
     # El wheelbase del F1TENTH
@@ -25,8 +31,9 @@ rpp_follower:
     # AJUSTADO: Lookahead más corto para curvas más cerradas
     LOOKAHEAD_DIST: 0.8               # Reducido de 2.5 a 1.5 para giros más agresivos
     
-    v_cmd: 2.0                        # Velocidad MÁXIMA (en rectas cuando adaptive_speed=true)
-    
+    v_cmd: 3.0                       # Velocidad máxima
+    v_min: 0.5                       # ⚠️ CRÍTICO: Bajar a 0.5-0.8 m/s
+                            
     # AJUSTADO: Límite de dirección aumentado para girar más
     steer_limit: 0.41                 # Aumentado de 0.41 (23.5°) a 0.50 (28.6°)
     
@@ -35,7 +42,6 @@ rpp_follower:
     
     # --- NUEVO: Parámetros de Velocidad Adaptativa en Curvas ---
     adaptive_speed: true              # Activar reducción automática de velocidad en curvas
-    v_min: 0.8                        # Velocidad MÍNIMA en curvas muy cerradas (m/s)
     curvature_lookahead: 3.0          # Distancia adelante para calcular curvatura (metros)
     curve_detection_points: 10        # Número de waypoints para análisis de curvatura
     speed_reduction_gain: 1.5         # Agresividad de reducción (mayor = más lento en curvas)
@@ -50,14 +56,14 @@ rpp_follower:
     # --- Parámetros de Obstacle Avoidance (LIDAR) ---
     use_scan: true
     scan_topic: "/scan"
-    avoid_enabled: false
     
     # AJUSTADO: Parámetros de evasión para tu caso
-    danger_dist: 2.0                  # Distancia a la que se activa la evasión (metros)
-    sector_deg: 130.0                 # Sector frontal a analizar (±60°)
-    min_gap_deg: 10.0                 # Ancho mínimo de gap para ser considerado válido
-    gap_margin: 0.35                  # Margen extra de seguridad en gaps (metros)
-    gap_mix_alpha: 0.8                # Balance: 0.7=70% gap, 30% waypoint
+    avoid_enabled: false
+    danger_dist: 2.5                  # Distancia a la que se activa la evasión (metros)
+    sector_deg: 150.0                 # Sector frontal a analizar (±60°)
+    min_gap_deg: 12.0                 # Ancho mínimo de gap para ser considerado válido
+    gap_margin: 0.4                  # Margen extra de seguridad en gaps (metros)
+    gap_mix_alpha: 0.5                # Balance: 0.7=70% gap, 30% waypoint
                                       # Aumenta para evasión más agresiva (0.8-0.9)
                                       # Reduce para seguir más el path (0.5-0.6)
     
