@@ -47,9 +47,9 @@ class MPCFollowerOSQP(Node):
         super().__init__("MPC")
 
         # ---------- parámetros básicos ----------
-        self.declare_parameter("waypoints_csv", "BrandsHatch_map1_Dijkstra_1p0m_BSpline_smooth.csv")
-        self.declare_parameter("topic_odom", "/ego_racecar/odom")
-        self.declare_parameter("topic_cmd", "/drive")
+        self.declare_parameter("waypoints_csv", "mapa_lab_way.csv")
+        self.declare_parameter("topic_odom", "/odom")
+        self.declare_parameter("topic_cmd", "/autonomous")
         self.declare_parameter("loop_track", True)
 
         # Modelo y sampleo temporal
