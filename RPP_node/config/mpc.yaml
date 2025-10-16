@@ -1,0 +1,67 @@
+# ==============================================================================
+# ==   PARÁMETROS COMPLETOS PARA MPC FOLLOWER (CON INTEGRACIÓN DE AMCL)       ==
+# ==============================================================================
+MPC:
+  ros__parameters:
+    # ==============================================================================
+    # == I/O, Archivos y Localización (AMCL + Odometría) ==
+    # ==============================================================================
+    waypoints_csv: "mapa_lab_way.csv" 
+    lidar_topic: "/scan"
+    topic_cmd: "/mpc/drive" # El MUX escuchará este topic para los comandos
+
+    use_amcl: true                   
+    topic_amcl: "/amcl_pose"         
+    topic_odom: "/odom"              
+    amcl_timeout: 2.0                
+
+    # ==============================================================================
+    # == Perfil de Velocidad y Tuning (Valores de inicio recomendados) ==
+    # ==============================================================================
+    v_top: 4.5
+    a_lat_max: 4.0
+    a_x_max: 4.0
+    a_x_min: -5.5
+    
+    # ==============================================================================
+    # == Costos del MPC (Tuning para suavidad con AMCL) ==
+    # ==============================================================================
+    Q_perp: 12.0
+    Q_psi: 7.0
+    Q_v: 2.5
+    R_a: 0.20
+    R_w: 0.25
+    Rd_w: 0.40
+
+    # ==============================================================================
+    # == Parámetros base del Modelo y Horizonte ==
+    # ==============================================================================
+    L: 0.33
+    dt: 0.02
+    ds_ref: 0.12
+    N: 10
+    steer_alpha: 0.22
+    loop_track: true
+    a_min: -5.0
+    a_max: 5.0
+    w_min: -3.2
+    w_max: 3.2
+    da_min: -1.0
+    da_max: 1.0
+    dw_min: -1.00
+    dw_max: 1.00
+    Qf_gain: 5.0
+    use_feedforward: true
+    kappa_sign: 1.0
+    ff_clip_ratio: 0.6
+    use_lidar_gate: true
+    lidar_window_deg: 20.0
+    a_brake: 12.0
+    stop_margin: 0.5
+    use_strategic_cornering: true
+    corner_kappa_threshold: 0.15
+    corner_offset_m: 0.8
+    lap_origin_x: 0.0
+    lap_origin_y: 0.0
+    lap_radius: 0.5
+    lap_partial_period_s: 2.0
