@@ -28,6 +28,7 @@ setup(
         'console_scripts': [
             'rpp_node_executable = RPP_node.rpp_node:main',
             'rpp_node_executable_2 = RPP_node.rpp_node_2:main',
+            'mpc_node_executable = MPC_node.mpc_node:main',
         ],
     },
 )
