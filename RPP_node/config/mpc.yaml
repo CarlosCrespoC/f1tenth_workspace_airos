@@ -13,7 +13,7 @@ MPC:
     use_amcl: true                   
     topic_amcl: "/amcl_pose"         
     topic_odom: "/odom"              
-    amcl_timeout: 2.0                
+    amcl_timeout: 1.0                
 
     # ==============================================================================
     # == Perfil de Velocidad y Tuning (Valores de inicio recomendados) ==
