@@ -40,7 +40,7 @@ def generate_launch_description():
     rpp_config = os.path.join(
         get_package_share_directory('RPP_node'),
         'config',
-        'rpp_params.yaml'
+        'rpp_params1.yaml'
     )
     rpp_waypoints = os.path.join(
         get_package_share_directory('RPP_node'),
