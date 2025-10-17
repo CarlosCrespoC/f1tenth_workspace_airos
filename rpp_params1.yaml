@@ -1,0 +1,62 @@
+# Parámetros para el nodo Reactive Pure Pursuit (Versión Corregida)
+rpp_follower:
+  ros__parameters:
+    # --- Configuración Esencial y de Tópicos ---
+    topic_odom: "/odom"
+    topic_cmd: "/autonomous"  # El ackermann_mux redirigirá esto a /drive
+    wheelbase: 0.33
+    path_frame: "map"
+    rate_hz: 50.0
+
+    # --- Localización (AMCL + Odom) ---
+    # Estrategia: Usar AMCL como fuente principal para precisión en el mapa.
+    use_amcl: true
+    topic_amcl: "/amcl_pose"
+    amcl_timeout: 1.0       # Si no hay msg de AMCL en 1s, usa odometría.
+    
+    steer_limit: 0.5
+    # --- Control de Velocidad (Adaptativa y Base) ---
+    # Estrategia: Velocidad máxima alta en rectas y reducción automática en curvas.
+    v_cmd: 2.5              # 2.0 Aumentamos la velocidad máxima objetivo para rectas.
+    v_min: 1.75              # 1.5 Velocidad mínima segura para las curvas más cerradas.
+    ramp_rate: 2.0          # 2.0  Aceleración un poco más suave para evitar deslizamientos.
+    
+    # --- Parámetros de Velocidad Adaptativa ---
+    # Estrategia: Anticipar curvas y reducir la velocidad de forma agresiva para mantener el control.
+    adaptive_speed: true
+    curvature_lookahead: 10.0     #7.0 Analizar la curvatura 5 metros adelante.
+    curve_detection_points: 5    #5 Usar 5 waypoints para un cálculo de curva más suave.
+    speed_reduction_gain: 4.0    #2.5 Un valor más alto frena más agresivamente antes de la curva.
+
+    # --- Parámetros de Lookahead Dinámico ---
+    # Estrategia: A mayor velocidad, mirar más lejos para suavizar la trayectoria.
+    # LOOKAHEAD_DIST ha sido ELIMINADO para evitar conflictos.
+    lookahead_min: 0.9      #0.9 Lookahead corto para agilidad en curvas lentas.
+    lookahead_max: 3.0      #2.0 Lookahead largo para estabilidad en rectas rápidas.
+    lookahead_gain: 0.4     #0.4 Ganancia que relaciona velocidad con lookahead (Ld = min + gain * v).
+
+    # --- Evasión de Obstáculos (Follow The Gap) ---
+    # Estrategia: Por ahora desactivado para enfocarnos en el tuneo del seguimiento de ruta.
+    # Actívalo solo cuando el coche ya siga la trayectoria de forma fiable.
+    use_scan: true
+    scan_topic: "/scan"
+    avoid_enabled: false
+    danger_dist: 2.0        # Distancia para activar la evasión.
+    sector_deg: 160.0       # Campo de visión frontal para buscar gaps.
+    min_gap_deg: 12.0       # Ancho mínimo de un hueco para considerarlo seguro.
+    gap_margin: 0.35        # Margen de seguridad adicional al pasar por un hueco.
+    gap_mix_alpha: 0.6      # Ponderación: 60% hacia el gap, 40% hacia el waypoint original.
+
+    # --- Conteo de Vueltas y Visualización ---
+    loop_track: true
+    min_lap_time_s: 10.0
+    cross_hi_frac: 0.80
+    cross_lo_frac: 0.20
+    publish_markers: true
+    publish_actual_path: true
+
+    # --- Control por Joystick ---
+    joy_topic: "/joy"
+    r1_button_index: 5      # Activar/Desactivar autonomía.
+    x_button_index: 0       # Parada de emergencia.
+    autonomous_start: false # Iniciar con la autonomía desactivada por seguridad.
